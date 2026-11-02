@@ -1,0 +1,114 @@
+{
+  "claimed_noise": 0.016218077882373044,
+  "coupler_sigma": 0.5,
+  "coupler_theta": 0.4,
+  "degrade_drift_per_day": 0.02,
+  "degrade_mean_days": 10.0,
+  "degrade_rate_per_day": 0.0,
+  "epc_a1": 0.00015,
+  "epc_b1": 0.6,
+  "err2q_a2": 0.003473532596420015,
+  "err2q_b2": 0.8,
+  "err2q_c": 0.002,
+  "err_noise_rel": 0.10324304660563952,
+  "offline_burst_geo_p": 0.35,
+  "offline_burst_rate": 0.011111111111111112,
+  "offline_p_mcar": 0.01,
+  "ou_sigma_t1": 0.05359734702442858,
+  "ou_sigma_tphi": 0.0822482419421467,
+  "ou_theta_t1": 1.8377109502878828,
+  "ou_theta_tphi": 0.5,
+  "probe_noise": 0.08054334558701536,
+  "readout_median": 0.015,
+  "readout_qubit_spread": 0.4,
+  "readout_sigma": 0.055069746427535926,
+  "readout_t1_coupling": -0.3,
+  "readout_theta": 0.4,
+  "recal_groups": 6,
+  "recal_jump_sigma": 0.05,
+  "recal_kappa": 0.35,
+  "recal_median_h": 1.7495468424050507,
+  "recal_sigma_log": 0.35,
+  "reset_decay_per_h": 0.01550627385149349,
+  "reset_hour": 23.0,
+  "start": "2026-01-01T00:00:00+00:00",
+  "t1_device_spread": 0.25,
+  "t1_median_us": 152.7606884427904,
+  "t1_qubit_spread": 0.35,
+  "t_gate_1q_us": 0.035,
+  "t_gate_2q_us": 0.3,
+  "tls_factor_hi": 0.8,
+  "tls_factor_lo": 0.3,
+  "tls_off_rate": 0.98962887572334,
+  "tls_on_rate": 0.004297564621771549,
+  "topologies": [
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 5,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 7,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 7,
+      "kind": "heavy_hex"
+    },
+    {
+      "distance": 7,
+      "kind": "heavy_hex"
+    },
+    {
+      "cols": 12,
+      "kind": "grid",
+      "rows": 6
+    },
+    {
+      "cols": 12,
+      "kind": "grid",
+      "rows": 6
+    },
+    {
+      "kind": "linear",
+      "n": 12
+    }
+  ],
+  "tphi_median_us": 134.79093495097328,
+  "tphi_qubit_spread": 0.35
+}

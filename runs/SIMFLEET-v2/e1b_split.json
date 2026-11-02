@@ -1,0 +1,70 @@
+{
+ "experiment": "E1b",
+ "sources": [
+  "sim"
+ ],
+ "observables": [
+  [
+   "t1_us",
+   "probe"
+  ],
+  [
+   "t2_us",
+   "probe"
+  ],
+  [
+   "readout_error",
+   "probe"
+  ],
+  [
+   "epc_1q",
+   "probe"
+  ],
+  [
+   "gate_error_2q",
+   "probe"
+  ]
+ ],
+ "horizons_steps": [
+  3,
+  9,
+  21,
+  42
+ ],
+ "grid_hours": 8.0,
+ "holdout_devices": [
+  "sim_dev_12",
+  "sim_dev_13",
+  "sim_dev_14",
+  "sim_dev_15"
+ ],
+ "train_end": "2026-05-07T00:00:00+00:00",
+ "val_end": "2026-05-25T00:00:00+00:00",
+ "norm_stats": {
+  "sim_sc|epc_1q|probe": [
+   0.0002845235857962184,
+   6.549081156232434e-05
+  ],
+  "sim_sc|gate_error_2q|claimed": [
+   0.006896076508266928,
+   0.001070817255044474
+  ],
+  "sim_sc|gate_error_2q|probe": [
+   0.006877297456699299,
+   0.0012132785344587897
+  ],
+  "sim_sc|readout_error|probe": [
+   0.015974864630263014,
+   0.006756105107901206
+  ],
+  "sim_sc|t1_us|probe": [
+   181.35919762333364,
+   76.5750334123022
+  ],
+  "sim_sc|t2_us|probe": [
+   99.43796205563724,
+   31.09319414983202
+  ]
+ },
+ "note": "Sim-Fleet v2 (recalibration-reset refit), 3 snapshots/day; not a sealed split"
+}

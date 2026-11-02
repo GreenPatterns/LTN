@@ -1,0 +1,8 @@
+exp: E7-v2-simv2
+model: calibration-e1b
+seed: 0
+git_sha: 731dac503bf5fd7bef309f24b8047f0b5b36e6a0
+start_time: '2026-11-02T10:17:20.245599+00:00'
+config:
+  ckpt: runs/E1b-simv2/ltn_v2/0/model.pt
+  temperature: 0.9852653139277714

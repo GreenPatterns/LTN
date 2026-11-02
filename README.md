@@ -145,6 +145,8 @@ python scripts/reliability_endpoints.py             # reliability endpoints (Tab
 | Fig. 6 (`F5_transfer.pdf`) | `figures.py` (F5) | `runs/E4a`, `runs/E4b`, `runs/E5` |
 | Fig. 7 (`F6_regret.pdf`) | `figures.py` (F6) | `runs/E6a` |
 | Fig. 8 (`F7_event.pdf`) | `figures.py` (F7) | `runs/E7`, `runs/E7-v2` |
+| Sim-Fleet-R, the recalibration-reset refit (Sec. IV; files named `simfleet-v2`) | `python scripts/fit_simfleet_v2.py`, then `python -m ltn.sim.validate --sim-config runs/SIMFLEET-v2/simfleet_v2_config.json --sim-label simfleet-v2 --out runs/SIMFLEET-v2 --tex runs/SIMFLEET-v2` | `runs/SIMFLEET-v2` (config, validation table and figures, the E1b split on the refit); `docs/PLAN_DELTA.md`, DEV-30 |
+| E7 rerun on Sim-Fleet-R (Sec. V-E) | `bash scripts/e7_simv2.sh <work-dir>` | `runs/E1b-simv2` (seed-0 LTN and LTN-v2), `runs/E7-simv2`, `runs/E7-v2-simv2` |
 | Generator spectra (Sec. V-A) | `scripts/spectra.py` | `runs/SPECTRA` |
 | Computational cost (Sec. V-B) | `scripts/benchmark_cost.py` | `runs/COST` |
 | Change-point detectors (Sec. V-C) | `scripts/e3_changepoint.py` | `runs/E3/changepoint_auroc.json` |
