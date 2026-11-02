@@ -1,0 +1,10 @@
+exp: E4a-base
+model: transformer-pretrained-k3
+seed: 3
+git_sha: 96fd4a558c9cdce084a1c9e67a8e66f54374b6c2
+start_time: '2026-11-02T04:34:26.442393+00:00'
+config:
+  k_days: 3
+  arm: pretrained
+  base: transformer
+  tuned: false

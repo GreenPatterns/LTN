@@ -1,0 +1,29 @@
+exp: HWCHECK-e1a
+model: ltn
+seed: 0
+git_sha: 96fd4a558c9cdce084a1c9e67a8e66f54374b6c2
+start_time: '2026-11-02T03:36:54.693239+00:00'
+config:
+  horizons:
+  - 3
+  - 9
+  - 21
+  time_unit_h: 8.0
+  seed: 0
+  lr: 0.006483307154370959
+  bptt: 16
+  carry_dim: 59
+  hidden: 94
+  evidence_rank: 2
+  rounds: 1
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - gate_error_2q/claimed
+  norm_stats_keys:
+  - ibm_sc|gate_error_2q|claimed
+  - ibm_sc|readout_error|probe
+  - ibm_sc|t1_us|probe
+  - ibm_sc|t2_us|probe
+n_params: 77860

@@ -133,9 +133,10 @@ python scripts/reliability_endpoints.py             # reliability endpoints (Tab
 | Table I, Fig. 3 (Sim-Fleet validation) | `python -m ltn.sim.validate` | `paper/figures/simval/sim_vs_real.json` |
 | Table II (data inventory) | `ltn/paper_gen/tables.py` (`t1_data`) | data lake |
 | Table III, Fig. 4 (`F3_crps.pdf`) | `tables.py` (`t2_main`), `figures.py` (F3) | `runs/E1a`, `runs/E1b` |
+| Ten-seed check of the E1a arms (Sec. V-A, V-G) | `python -m ltn.exp.run --split e1a --model <model> --seed <5–9> --tuned --exp E1a-extra`; the −Hamiltonian arm as in `scripts/e2_noH.sh` | `runs/E1a-extra` (seeds 5–9; seeds 0–4 are in `runs/E1a` and `runs/E2-e1a`); `runs/HWCHECK-e1a` (stored seeds re-run on the machine used for seeds 5–9; `docs/PLAN_DELTA.md`, DEV-29) |
 | Table IV, Fig. 5 (`F4_ablations.pdf`) | `tables.py` (`t3_ablations`), `figures.py` (F4) | `runs/E2-e1a`, `runs/E2-e1b` |
 | Table V (classical reliability models) | `ltn/baselines/reliability.py` through `ltn.exp.run` | `runs/E1a/{gp,kalman,hmm,wiener,gamma}`, `runs/tuning` |
-| Table VI (matched pretraining) | `python -m ltn.exp.e4 --part a --base --seeds 3 --models ltn,lstm,tgn,transformer` | `runs/E4a-base` |
+| Table VI (matched pretraining) | `python -m ltn.exp.e4 --part a --base --seeds 5 --models ltn,lstm,tgn,transformer` | `runs/E4a-base` |
 | Table VII (E8) | `ltn/exp/e8.py`, `tables.py` (`t4_e8`) | `runs/E8` |
 | Tables VIII–X (reliability endpoints) | `scripts/reliability_endpoints.py` | `runs/RELIABILITY`, `paper/tables/T6_reliability.tex` |
 | Table XI (state sufficiency), carry-free arm | `scripts/carry_ablation.py` | `runs/CARRY` |
