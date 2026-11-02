@@ -1,0 +1,11 @@
+[11:57:46] E2-e1a ltn_noH, 5 seeds, tuned v1 params: lr=0.006483307154370959 bptt=16 carry_dim=59 hidden=94 evidence_rank=2 rounds=1
+scripts/e2_noH.sh: line 22: 1978353 Killed                  CUDA_VISIBLE_DEVICES=$g $PY -m ltn.exp.run --split e1a --model ltn --seed $s --exp E2-e1a --as ltn_noH --cfg $PARAMS use_hamiltonian=0 >> runs/campaign_logs/e2_noH_s$s.log 2>&1
+[13:01:45] E2-noH DONE
+ltn        mean=0.2925 median=0.2808 sd=0.0255 max=0.3375 seeds=[np.float64(0.2808), np.float64(0.2786), np.float64(0.2884), np.float64(0.3375), np.float64(0.2771)]
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "<stdin>", line 5, in sd
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/generic.py", line 6206, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'ncrps'

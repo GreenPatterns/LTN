@@ -1,0 +1,10 @@
+exp: E4b-base
+model: tgn-pretrained-k30
+seed: 0
+git_sha: dff652b65b18f0ba8723a0b264743ce0ac32f120
+start_time: '2026-07-18T13:09:53.230032+00:00'
+config:
+  k_days: 30
+  arm: pretrained
+  base: tgn
+  tuned: false

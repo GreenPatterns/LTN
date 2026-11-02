@@ -1,0 +1,3 @@
+[dscale cpu] d=  2 fwd+bwd     17.26 ms drift      0.87 ms
+[dscale cpu] d=  4 fwd+bwd    111.25 ms drift      2.84 ms
+[dscale cpu] d=  8 fwd+bwd   2445.33 ms drift    142.67 ms

@@ -1,0 +1,28 @@
+exp: DSWEEP-v2-e1a
+model: d5
+seed: 1
+git_sha: e45176426fe7f9111927291d2c96963d487c0b70
+start_time: '2026-07-17T09:16:02.131762+00:00'
+config:
+  horizons:
+  - 3
+  - 9
+  - 21
+  time_unit_h: 8.0
+  seed: 1
+  lr: 0.008423294132814821
+  bptt: 32
+  carry_dim: 31
+  hidden: 126
+  d: 5
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - gate_error_2q/claimed
+  norm_stats_keys:
+  - ibm_sc|gate_error_2q|claimed
+  - ibm_sc|readout_error|probe
+  - ibm_sc|t1_us|probe
+  - ibm_sc|t2_us|probe
+n_params: 67852

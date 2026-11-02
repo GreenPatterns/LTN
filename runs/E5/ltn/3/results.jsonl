@@ -1,0 +1,5 @@
+{"exp": "E5", "model": "ltn", "seed": 3, "metric": "spearman_pooled", "ltn": 0.07535284992094765, "ltn_p": 0.577, "raw_dem": 0.07710199665127863, "raw_p": 0.5649, "n_subgraphs": 55}
+{"exp": "E5", "model": "ltn", "seed": 3, "metric": "spearman_device", "device": "google_105q", "rho": -0.3175472333599502, "n": 28}
+{"exp": "E5", "model": "ltn", "seed": 3, "metric": "spearman_device", "device": "google_color", "rho": 0.39999999999999997, "n": 4}
+{"exp": "E5", "model": "ltn", "seed": 3, "metric": "spearman_device", "device": "google_dynamic", "rho": 0.5603715170278638, "n": 18}
+{"exp": "E5", "model": "ltn", "seed": 3, "metric": "spearman_device", "device": "google_sycamore_2022", "rho": 0.19999999999999998, "n": 5}

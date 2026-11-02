@@ -1,0 +1,34 @@
+\begin{tabular}{lccr}
+\toprule
+Model & NCRPS [95\% CI] & Seeds & Params \\
+\midrule
+% [legacy, row-level, inflated n] Wilcoxon LTN vs lstm: 28% of cells Holm-significant, median Cliff's d = 0.11
+% [reported] cell-paired Wilcoxon LTN vs lstm: n = 36 cells, p = 4.29e-07, Cliff's d = 0.16, LTN worse in 92% of cells
+\multicolumn{4}{l}{\emph{E1a (real, DAQEC)}} \\
+\textbf{LSTM} & \textbf{0.27 [0.223, 0.319]} & 5 & 16,808 \\
+TGN & 0.279 [0.231, 0.334] & 5 & 208,190 \\
+LTN-v2 & 0.28 [0.229, 0.336] & 5 & 67,852 \\
+ARIMA & 0.29 [0.231, 0.347] & 1 & -- \\
+LTN & 0.292 [0.248, 0.344] & 5 & 77,860 \\
+Transformer & 0.3 [0.245, 0.357] & 5 & 26,144 \\
+gp & 0.338 [0.256, 0.419] & 1 & -- \\
+kalman & 0.341 [0.262, 0.419] & 1 & -- \\
+EWMA & 0.375 [0.287, 0.463] & 1 & -- \\
+Persistence & 0.424 [0.312, 0.548] & 1 & -- \\
+hmm & 0.512 [0.393, 0.634] & 1 & -- \\
+wiener & 0.541 [0.407, 0.679] & 1 & -- \\
+gamma & 0.582 [0.442, 0.724] & 1 & -- \\
+\midrule
+% [legacy, row-level, inflated n] Wilcoxon LTN vs transformer: 65% of cells Holm-significant, median Cliff's d = 0.02
+% [reported] cell-paired Wilcoxon LTN vs transformer: n = 240 cells, p = 8.72e-24, Cliff's d = 0.02, LTN worse in 79% of cells
+\multicolumn{4}{l}{\emph{E1b (Sim-Fleet, synthetic)}} \\
+\textbf{Transformer} & \textbf{0.31 [0.28, 0.341]} & 5 & 259,622 \\
+LSTM & 0.31 [0.281, 0.34] & 5 & 36,186 \\
+TGN & 0.311 [0.282, 0.343] & 5 & 282,196 \\
+LTN & 0.312 [0.283, 0.344] & 5 & 79,616 \\
+LTN-v2 & 0.313 [0.285, 0.344] & 5 & 89,138 \\
+ARIMA & 0.319 [0.289, 0.353] & 1 & -- \\
+EWMA & 0.329 [0.298, 0.362] & 1 & -- \\
+Persistence & 0.431 [0.39, 0.474] & 1 & -- \\
+\bottomrule
+\end{tabular}

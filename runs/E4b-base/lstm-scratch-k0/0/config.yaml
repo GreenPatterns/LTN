@@ -1,0 +1,10 @@
+exp: E4b-base
+model: lstm-scratch-k0
+seed: 0
+git_sha: c3319675fdae5f3fb3c459e64e2e7e0e2bd93431
+start_time: '2026-07-18T13:01:19.539173+00:00'
+config:
+  k_days: 0
+  arm: scratch
+  base: lstm
+  tuned: false

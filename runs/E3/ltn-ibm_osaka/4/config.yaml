@@ -1,0 +1,7 @@
+exp: E3
+model: ltn-ibm_osaka
+seed: 4
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T13:03:00.656537+00:00'
+config:
+  fold: ibm_osaka

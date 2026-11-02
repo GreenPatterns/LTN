@@ -1,0 +1,30 @@
+exp: E2-e1a
+model: ltn_noH
+seed: 0
+git_sha: d7c3f7dcd5a329931a78ff656146f7fc124e15fb
+start_time: '2026-07-17T11:57:48.989916+00:00'
+config:
+  horizons:
+  - 3
+  - 9
+  - 21
+  time_unit_h: 8.0
+  seed: 0
+  lr: 0.006483307154370959
+  bptt: 16
+  carry_dim: 59
+  hidden: 94
+  evidence_rank: 2
+  rounds: 1
+  use_hamiltonian: 0
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - gate_error_2q/claimed
+  norm_stats_keys:
+  - ibm_sc|gate_error_2q|claimed
+  - ibm_sc|readout_error|probe
+  - ibm_sc|t1_us|probe
+  - ibm_sc|t2_us|probe
+n_params: 77860

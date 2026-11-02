@@ -1,0 +1,35 @@
+{
+ "e4a": {
+  "adapt_days": [
+   0,
+   1,
+   3,
+   7
+  ],
+  "eval": "final 20% of ibm_osaka grid",
+  "holdout_device": "ibm_osaka",
+  "pretrain": [
+   "ibm_brisbane",
+   "ibm_kyoto",
+   "silicon",
+   "sim"
+  ]
+ },
+ "e4b": {
+  "adapt_days": [
+   0,
+   1,
+   7,
+   30
+  ],
+  "eval": "final 20% of holdout device grids",
+  "holdout_devices": [
+   "sim_dev_12",
+   "sim_dev_13",
+   "sim_dev_14",
+   "sim_dev_15"
+  ],
+  "pretrain": "sim non-holdout"
+ },
+ "experiment": "E4"
+}

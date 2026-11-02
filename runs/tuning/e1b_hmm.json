@@ -1,0 +1,10 @@
+{
+ "value": 0.4430599177606364,
+ "params": {
+  "n_states": 3,
+  "var_floor_frac": 0.0027446678334331854,
+  "sigma_scale": 0.5863671840764605
+ },
+ "n_trials": 50,
+ "n_trial_records": 50
+}

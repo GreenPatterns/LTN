@@ -1,0 +1,57 @@
+# LTN ("Trust Decoheres") — top-level Python requirements  (conda env: qt, Python 3.11)
+# Curated to MASTER_EXECUTION_PLAN §2.1 + the quantum/eval needs of §2.2, §2.7, §2.8.
+# Pinned to the versions validated by scripts/verify_env.py on 2026-07-12 (3x NVIDIA L40S).
+# For the exact frozen graph of every transitive dependency, use env/requirements-lock.txt.
+#
+# NOTE on torch + CUDA: the default PyPI `torch==2.13.0` wheel bundles the CUDA 13.0
+# runtime (cu130) — an exact match for this machine's NVIDIA driver 580.x / CUDA 13.0
+# on the L40S (sm_89). Plain `pip install torch==2.13.0` is sufficient; no --index-url
+# is required. If reproducing on a host with an older driver, pick a matching build from
+# https://download.pytorch.org/whl (e.g. cu126) instead.
+
+# --- deep learning / GPU ---
+torch==2.13.0                 # cu130 build (bundled) — 3x L40S, sm_89
+torch_geometric==2.8.0        # temporal graphs / message passing (KrausProp base)
+
+# --- quantum stack ---
+qiskit==2.5.0                 # coupling maps, backend configs (graph builder A4)
+qiskit-ibm-runtime==0.47.0    # IBM fleet calibration harvester (A1) — longitudinal backbone
+qiskit-aer==0.17.2            # optional local reality-check simulation
+qutip==5.3.0                  # density-matrix / Lindblad reference for unit tests (§2.2)
+
+# --- scientific / numerical ---
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.3
+pyarrow==25.0.0               # parquet event lake
+statsmodels==0.14.6           # ARIMA / EWMA baselines (E1)
+scikit-learn==1.9.0           # AUROC/AUPRC, calibration (E3, E7)
+properscoring==0.1            # CRPS — headline forecast metric & early-stop criterion
+h5py==3.16.0                  # Google QEC datasets (HDF5)
+
+# --- experiment tooling ---
+optuna==4.9.0                 # 50-trial HPO budgets per baseline (B3)
+wandb==0.28.0                 # experiment logging (CSV fallback ok)
+pyyaml==6.0.3                 # exp/E*.yaml configs
+matplotlib==3.11.0            # figures F1–F7
+seaborn==0.13.2
+zenodo_get==3.0.3             # Tier-1 dataset downloads (DAQEC, Google QEC, silicon)
+
+# --- QEC data parsing (added 2026-07-13 for Google Zenodo loaders [DEV-7]) ---
+stim==1.16.0                  # .stim circuits, .dem detector error models, .b8 shot data
+pymatching==2.4.0             # MWPM decoding -> logical_error_per_round (E5 target)
+sinter==1.16.0                # optional parallel decoding convenience
+
+# --- notebooks / dev / CI ---
+jupyterlab==4.6.1             # data-quality notebook (A6), data inventory
+ipykernel                     # kernel `qt` registered for Jupyter
+pytest==9.1.1                 # unit tests (each §2.2 guarantee)
+pytest-cov
+tqdm
+requests
+
+# --- NOT installed (optional PyG C/CUDA extensions) ---
+# torch-scatter / torch-sparse / pyg-lib have no prebuilt wheels for torch 2.13 + cu130
+# yet, and PyG core message passing (GCNConv, custom MessagePassing) works without them.
+# Add later only if a scatter-heavy op needs acceleration, once wheels are published at
+# https://data.pyg.org/whl/torch-2.13.0+cu130.html (or build from source against nvcc 13).

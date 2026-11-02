@@ -1,0 +1,8 @@
+exp: E4a
+model: pretrained-k7
+seed: 0
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T13:07:24.977836+00:00'
+config:
+  k_days: 7
+  arm: pretrained

@@ -1,0 +1,10 @@
+{
+ "value": 0.5880208593606503,
+ "params": {
+  "min_frac_nonneg": 0.7469660767672961,
+  "drift_window": 0,
+  "sigma_scale": 1.135482199008357
+ },
+ "n_trials": 50,
+ "n_trial_records": 50
+}

@@ -1,0 +1,5 @@
+[14:07:49] E7-v2 start
+[e7:cal:e1a] T=1.014 cov90 raw=0.852 scaled=0.857
+[e7:cal:e1b] T=0.988 cov90 raw=0.908 scaled=0.904
+[e7] event rows: 19870 -> runs/E7-v2/event_study.parquet
+[14:14:46] E7-v2 done

@@ -1,0 +1,32 @@
+{
+ "CUSUM": {
+  "per_fold": {
+   "ibm_brisbane": 0.5499999999999999,
+   "ibm_kyoto": 0.5391836154174371,
+   "ibm_osaka": 0.29312865497076024
+  },
+  "mean_auroc": 0.4607707567960658,
+  "causal": true,
+  "n_folds": 3
+ },
+ "Page--Hinkley": {
+  "per_fold": {
+   "ibm_brisbane": 0.59296875,
+   "ibm_kyoto": 0.606030436637747,
+   "ibm_osaka": 0.5381741390513319
+  },
+  "mean_auroc": 0.579057775229693,
+  "causal": true,
+  "n_folds": 3
+ },
+ "Binary segmentation": {
+  "per_fold": {
+   "ibm_brisbane": 0.551171875,
+   "ibm_kyoto": 0.5659934575451573,
+   "ibm_osaka": 0.5246913580246912
+  },
+  "mean_auroc": 0.5472855635232828,
+  "causal": false,
+  "n_folds": 3
+ }
+}

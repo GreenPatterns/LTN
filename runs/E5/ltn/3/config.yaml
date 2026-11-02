@@ -1,0 +1,7 @@
+exp: E5
+model: ltn
+seed: 3
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T13:40:17.214788+00:00'
+config:
+  pretrain: false

@@ -1,0 +1,8 @@
+exp: E6b
+model: oracle
+seed: 0
+git_sha: 502fea1cc0173cdc041d1baad1cf39c502f2758e
+start_time: '2026-07-16T02:24:20.495788+00:00'
+config:
+  note: secondary, logged-arms partial feedback [DEV-5]
+  kappa: 1.0

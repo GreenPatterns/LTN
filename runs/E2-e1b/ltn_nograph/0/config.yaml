@@ -1,0 +1,34 @@
+exp: E2-e1b
+model: ltn_nograph
+seed: 0
+git_sha: 502fea1cc0173cdc041d1baad1cf39c502f2758e
+start_time: '2026-07-16T02:25:41.294743+00:00'
+config:
+  horizons:
+  - 1
+  - 3
+  - 7
+  - 14
+  time_unit_h: 24.0
+  seed: 0
+  lr: 0.0044922673391136255
+  bptt: 16
+  carry_dim: 52
+  hidden: 109
+  evidence_rank: 4
+  rounds: 1
+  use_graph: 0
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - epc_1q/probe
+  - gate_error_2q/probe
+  norm_stats_keys:
+  - sim_sc|epc_1q|probe
+  - sim_sc|gate_error_2q|claimed
+  - sim_sc|gate_error_2q|probe
+  - sim_sc|readout_error|probe
+  - sim_sc|t1_us|probe
+  - sim_sc|t2_us|probe
+n_params: 79616

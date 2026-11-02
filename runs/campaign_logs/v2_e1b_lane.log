@@ -1,0 +1,7 @@
+[11:38:13] TUNE e1b ltn_v2: 45/50 complete already
+[11:38:13]   launching remaining 5 trials split 2/2/1 across GPU0/1/2
+[12:04:33] TUNE done: 54 trials, best 0.2988 {'lr': 0.006534717282090874, 'bptt': 16, 'carry_dim': 42, 'hidden': 99}
+[12:04:33] FINALS e1b ltn_v2 (5 seeds, parallel)
+scripts/v2_e1b_parallel.sh: line 52: 1990627 Killed                  CUDA_VISIBLE_DEVICES=$g $PY -m ltn.exp.run --split e1b --model ltn_v2 --seed $s --tuned >> runs/campaign_logs/v2_e1b_final_s$s.log 2>&1
+[13:32:45] FINALS done
+[13:32:45] DSWEEP e1b d in {5,6,8} x seeds {0,1,2} (parallel)

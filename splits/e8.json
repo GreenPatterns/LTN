@@ -1,0 +1,16 @@
+{
+ "control": "vector+GRU state, same pipeline, param-matched",
+ "datasets": {
+  "bitcoin_alpha": "data/raw/snap/soc-sign-bitcoinalpha.csv.gz",
+  "bitcoin_otc": "data/raw/snap/soc-sign-bitcoinotc.csv.gz"
+ },
+ "experiment": "E8",
+ "split": {
+  "temporal_edge_fracs": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "task": "next-window edge weight prediction (scaled to [0,1])"
+}

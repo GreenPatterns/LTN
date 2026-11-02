@@ -1,0 +1,8 @@
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 32, "rmse": 0.140647725657256, "auroc": 0.618912368401121, "phase": "test", "n": 516}
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 33, "rmse": 0.13327694590052422, "auroc": 0.5569416498993964, "phase": "test", "n": 517}
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 34, "rmse": 0.16797646453319334, "auroc": 0.6123003737682636, "phase": "test", "n": 517}
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 35, "rmse": 0.1676922892913059, "auroc": 0.5875020041686709, "phase": "test", "n": 516}
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 36, "rmse": 0.15695055403248295, "auroc": 0.7097580015612802, "phase": "test", "n": 517}
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 37, "rmse": 0.15702587210319963, "auroc": 0.6611707608948576, "phase": "test", "n": 516}
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 38, "rmse": 0.18822241726808742, "auroc": 0.692731510913329, "phase": "test", "n": 517}
+{"exp": "E8", "model": "ltn_dm-alpha", "seed": 0, "window": 39, "rmse": 0.14130257141435287, "auroc": 0.5612443727743062, "phase": "test", "n": 517}

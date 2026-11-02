@@ -1,0 +1,8 @@
+/home/mucbp/PROJECTS/QuTen/ltn/baselines/neural.py:107: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.enc = nn.TransformerEncoder(layer, num_layers=n_layers)
+wrote /home/mucbp/PROJECTS/QuTen/runs/COST/train_time.json
+wrote /home/mucbp/PROJECTS/QuTen/runs/COST/latency.json
+[dscale cpu] d=  2 fwd+bwd     12.19 ms drift      0.88 ms
+[dscale cpu] d=  4 fwd+bwd     42.32 ms drift      2.80 ms
+[dscale cpu] d=  8 fwd+bwd   1189.70 ms drift     56.51 ms
+[dscale cpu] d= 16 fwd+bwd  86999.18 ms drift   6582.48 ms

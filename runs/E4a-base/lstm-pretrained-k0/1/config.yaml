@@ -1,0 +1,10 @@
+exp: E4a-base
+model: lstm-pretrained-k0
+seed: 1
+git_sha: 7f67c71fe7b41c7e232d4694389badd9314e7d5b
+start_time: '2026-07-18T12:17:03.096082+00:00'
+config:
+  k_days: 0
+  arm: pretrained
+  base: lstm
+  tuned: false

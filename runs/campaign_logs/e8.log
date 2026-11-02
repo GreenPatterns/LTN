@@ -1,0 +1,21 @@
+[e8:otc] seed0 ltn_dm: test RMSE=0.1743 AUROC=0.670
+[e8:otc] seed0 vector_gru: test RMSE=0.2774 AUROC=0.434
+[e8:otc] seed1 ltn_dm: test RMSE=0.1739 AUROC=0.625
+[e8:otc] seed1 vector_gru: test RMSE=0.3006 AUROC=0.467
+[e8:otc] seed2 ltn_dm: test RMSE=0.1745 AUROC=0.551
+[e8:otc] seed2 vector_gru: test RMSE=0.3845 AUROC=0.562
+[e8:otc] seed3 ltn_dm: test RMSE=0.1735 AUROC=0.652
+[e8:otc] seed3 vector_gru: test RMSE=0.3144 AUROC=0.533
+[e8:otc] seed4 ltn_dm: test RMSE=0.1734 AUROC=0.642
+[e8:otc] seed4 vector_gru: test RMSE=0.2401 AUROC=0.608
+[e8:alpha] seed0 ltn_dm: test RMSE=0.1566 AUROC=0.625
+[e8:alpha] seed0 vector_gru: test RMSE=0.2998 AUROC=0.380
+[e8:alpha] seed1 ltn_dm: test RMSE=0.1566 AUROC=0.567
+[e8:alpha] seed1 vector_gru: test RMSE=0.2745 AUROC=0.409
+[e8:alpha] seed2 ltn_dm: test RMSE=0.1575 AUROC=0.510
+[e8:alpha] seed2 vector_gru: test RMSE=0.2981 AUROC=0.372
+[e8:alpha] seed3 ltn_dm: test RMSE=0.1563 AUROC=0.614
+[e8:alpha] seed3 vector_gru: test RMSE=0.2714 AUROC=0.379
+[e8:alpha] seed4 ltn_dm: test RMSE=0.1566 AUROC=0.590
+[e8:alpha] seed4 vector_gru: test RMSE=0.1852 AUROC=0.585
+E8-DONE

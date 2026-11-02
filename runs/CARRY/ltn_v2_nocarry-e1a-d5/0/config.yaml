@@ -1,0 +1,28 @@
+exp: CARRY
+model: ltn_v2_nocarry-e1a-d5
+seed: 0
+git_sha: dff652b65b18f0ba8723a0b264743ce0ac32f120
+start_time: '2026-07-18T13:14:22.558428+00:00'
+config:
+  horizons:
+  - 3
+  - 9
+  - 21
+  time_unit_h: 8.0
+  seed: 0
+  lr: 0.008423294132814821
+  bptt: 32
+  carry_dim: 31
+  hidden: 126
+  device: cuda:0
+  d: 5
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - gate_error_2q/claimed
+  norm_stats_keys:
+  - ibm_sc|gate_error_2q|claimed
+  - ibm_sc|readout_error|probe
+  - ibm_sc|t1_us|probe
+  - ibm_sc|t2_us|probe

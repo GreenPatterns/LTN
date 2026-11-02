@@ -1,0 +1,27 @@
+{
+ "experiment": "E5",
+ "forbidden_in_training": [
+  "google_qec"
+ ],
+ "inputs": [
+  [
+   "dem_error_prob",
+   "claimed"
+  ]
+ ],
+ "metric": "spearman",
+ "null": "permutation, 10000 resamples, seed 0",
+ "pretrain_sources_allowed": [
+  "sim"
+ ],
+ "rank_over": "subgraph entities per google device",
+ "ranking_target": [
+  "logical_error_per_round",
+  "delivered"
+ ],
+ "test_source": "google_qec",
+ "train_sources": [
+  "daqec",
+  "silicon"
+ ]
+}

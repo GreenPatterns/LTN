@@ -1,0 +1,2 @@
+[I 2026-07-17 07:14:47,702] Using an existing study with name 'e1b_ltn_v2' instead of creating a new one.
+{"value": 0.2988066590138898, "params": {"lr": 0.006534717282090874, "bptt": 16, "carry_dim": 42, "hidden": 99}, "n_trials": 49, "n_trial_records": 54}

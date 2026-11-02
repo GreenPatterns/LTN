@@ -1,0 +1,50 @@
+{
+ "experiment": "E1a",
+ "grid_hours": 8.0,
+ "horizons_steps": [
+  3,
+  9,
+  21
+ ],
+ "norm_stats": {
+  "ibm_sc|gate_error_2q|claimed": [
+   0.008014900985072635,
+   0.0011598695950181808
+  ],
+  "ibm_sc|readout_error|probe": [
+   0.015020968152915353,
+   0.0025481833130878385
+  ],
+  "ibm_sc|t1_us|probe": [
+   162.8951830426349,
+   33.007219505448745
+  ],
+  "ibm_sc|t2_us|probe": [
+   90.13202132407591,
+   18.713700378108587
+  ]
+ },
+ "observables": [
+  [
+   "t1_us",
+   "probe"
+  ],
+  [
+   "t2_us",
+   "probe"
+  ],
+  [
+   "readout_error",
+   "probe"
+  ],
+  [
+   "gate_error_2q",
+   "claimed"
+  ]
+ ],
+ "sources": [
+  "daqec"
+ ],
+ "train_end": "2025-01-24T18:00:00+00:00",
+ "val_end": "2025-01-26T08:00:00+00:00"
+}

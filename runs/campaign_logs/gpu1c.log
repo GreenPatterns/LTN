@@ -1,0 +1,111 @@
+[lane] E3
+Traceback (most recent call last):
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'ts'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/mucbp/PROJECTS/QuTen/ltn/exp/e3.py", line 196, in <module>
+    main()
+  File "/home/mucbp/PROJECTS/QuTen/ltn/exp/e3.py", line 181, in main
+    res = run_fold(fold, split, e1a, uts, args.gpu, args.pretrain_ckpt, seed)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/PROJECTS/QuTen/ltn/exp/e3.py", line 124, in run_fold
+    cal = uts.dropna(subset=["cal_ts"]).groupby(["device", "entity_id", "ts"], observed=True).apply(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1650, in apply
+    return self._python_apply_general(f, self._obj_with_exclusions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1687, in _python_apply_general
+    values, mutated = self._grouper.apply_groupwise(f, data)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 1035, in apply_groupwise
+    res = f(group)
+          ^^^^^^^^
+  File "/home/mucbp/PROJECTS/QuTen/ltn/exp/e3.py", line 125, in <lambda>
+    lambda g: ((g["ts"] - g["cal_ts"]).dt.total_seconds() / 3600).mean(), include_groups=False
+                ~^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'ts'
+[lane] E4a
+[e4a] seed0 k=0 pretrained: mean NCRPS 0.5135 (12 cells)
+[e4a] seed0 k=0 scratch: mean NCRPS 0.6040 (12 cells)
+[e4a] seed0 k=1 pretrained: mean NCRPS 0.3229 (12 cells)
+[e4a] seed0 k=1 scratch: mean NCRPS 0.5662 (12 cells)
+[e4a] seed0 k=3 pretrained: mean NCRPS 0.3147 (12 cells)
+[e4a] seed0 k=3 scratch: mean NCRPS 0.5665 (12 cells)
+[e4a] seed0 k=7 pretrained: mean NCRPS 0.3287 (12 cells)
+[e4a] seed0 k=7 scratch: mean NCRPS 0.5660 (12 cells)
+[e4a] seed1 k=0 pretrained: mean NCRPS 0.4457 (12 cells)
+[e4a] seed1 k=0 scratch: mean NCRPS 0.5688 (12 cells)
+[e4a] seed1 k=1 pretrained: mean NCRPS 0.3388 (12 cells)
+[e4a] seed1 k=1 scratch: mean NCRPS 0.5332 (12 cells)
+[e4a] seed1 k=3 pretrained: mean NCRPS 0.3364 (12 cells)
+[e4a] seed1 k=3 scratch: mean NCRPS 0.5340 (12 cells)
+[e4a] seed1 k=7 pretrained: mean NCRPS 0.3408 (12 cells)
+[e4a] seed1 k=7 scratch: mean NCRPS 0.5336 (12 cells)
+[e4a] seed2 k=0 pretrained: mean NCRPS 0.5523 (12 cells)
+[e4a] seed2 k=0 scratch: mean NCRPS 0.5720 (12 cells)
+[e4a] seed2 k=1 pretrained: mean NCRPS 0.3808 (12 cells)
+[e4a] seed2 k=1 scratch: mean NCRPS 0.5345 (12 cells)
+[e4a] seed2 k=3 pretrained: mean NCRPS 0.3654 (12 cells)
+[e4a] seed2 k=3 scratch: mean NCRPS 0.5343 (12 cells)
+[e4a] seed2 k=7 pretrained: mean NCRPS 0.3660 (12 cells)
+[e4a] seed2 k=7 scratch: mean NCRPS 0.5342 (12 cells)
+[e4a] seed3 k=0 pretrained: mean NCRPS 0.4811 (12 cells)
+[e4a] seed3 k=0 scratch: mean NCRPS 0.5524 (12 cells)
+[e4a] seed3 k=1 pretrained: mean NCRPS 0.3560 (12 cells)
+[e4a] seed3 k=1 scratch: mean NCRPS 0.5243 (12 cells)
+[e4a] seed3 k=3 pretrained: mean NCRPS 0.3403 (12 cells)
+[e4a] seed3 k=3 scratch: mean NCRPS 0.5234 (12 cells)
+[e4a] seed3 k=7 pretrained: mean NCRPS 0.3374 (12 cells)
+[e4a] seed3 k=7 scratch: mean NCRPS 0.5228 (12 cells)
+[e4a] seed4 k=0 pretrained: mean NCRPS 0.5193 (12 cells)
+[e4a] seed4 k=0 scratch: mean NCRPS 0.6087 (12 cells)
+[e4a] seed4 k=1 pretrained: mean NCRPS 0.3959 (12 cells)
+[e4a] seed4 k=1 scratch: mean NCRPS 0.5704 (12 cells)
+[e4a] seed4 k=3 pretrained: mean NCRPS 0.3828 (12 cells)
+[e4a] seed4 k=3 scratch: mean NCRPS 0.5712 (12 cells)
+[e4a] seed4 k=7 pretrained: mean NCRPS 0.3776 (12 cells)
+[e4a] seed4 k=7 scratch: mean NCRPS 0.5703 (12 cells)
+[lane] E5
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/mucbp/PROJECTS/QuTen/ltn/exp/e5.py", line 178, in <module>
+    main()
+  File "/home/mucbp/PROJECTS/QuTen/ltn/exp/e5.py", line 163, in main
+    scored = score_google(m, seed)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/PROJECTS/QuTen/ltn/exp/e5.py", line 131, in score_google
+    sc = pd.DataFrame(rows).groupby(["device", "entity_id"], observed=True).mean().reset_index()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/util/_decorators.py", line 336, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/frame.py", line 10833, in groupby
+    return DataFrameGroupBy(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1095, in __init__
+    grouper, exclusions, obj = get_grouper(
+                               ^^^^^^^^^^^^
+  File "/home/mucbp/.conda/envs/qt/lib/python3.11/site-packages/pandas/core/groupby/grouper.py", line 901, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'device'
+[lane] GPU1-EXP-LANE-DONE

@@ -1,0 +1,25 @@
+exp: SMOKE-v2
+model: ltn_v2_smoke
+seed: 0
+git_sha: c15eab42c225ca4b6576de9430637d378ab56d7b
+start_time: '2026-07-17T01:15:13.024276+00:00'
+config:
+  horizons:
+  - 3
+  - 9
+  - 21
+  time_unit_h: 8.0
+  seed: 0
+  epochs: 2
+  patience: 2
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - gate_error_2q/claimed
+  norm_stats_keys:
+  - ibm_sc|gate_error_2q|claimed
+  - ibm_sc|readout_error|probe
+  - ibm_sc|t1_us|probe
+  - ibm_sc|t2_us|probe
+n_params: 63749

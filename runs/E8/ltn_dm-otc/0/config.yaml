@@ -1,0 +1,8 @@
+exp: E8
+model: ltn_dm-otc
+seed: 0
+git_sha: e8b4daabbd8a662fc13404afda2e21570c3955a4
+start_time: '2026-07-15T09:29:04.069920+00:00'
+config:
+  dataset: otc
+  n_params: 2679

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ltn"
+version = "0.1.0"
+description = "Lindblad Trust Networks: density-matrix trust states with learned Lindblad dynamics over quantum-hardware telemetry graphs"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+include = ["ltn*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --tb=short"
+markers = [
+    "slow: long-running tests (qutip cross-checks, decoding) — deselect with -m 'not slow'",
+    "gpu: requires CUDA",
+    "data: requires downloaded raw datasets under data/raw/",
+]
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,63 @@
+{
+ "divergence_def": {
+  "stat": "abs(probe-claimed)/claimed",
+  "z_ref": "train fold, per device x observable",
+  "z_threshold": 2.0
+ },
+ "experiment": "E3",
+ "folds": [
+  {
+   "test": [
+    "ibm_osaka"
+   ],
+   "train": [
+    "ibm_brisbane",
+    "ibm_kyoto"
+   ]
+  },
+  {
+   "test": [
+    "ibm_kyoto"
+   ],
+   "train": [
+    "ibm_brisbane",
+    "ibm_osaka"
+   ]
+  },
+  {
+   "test": [
+    "ibm_brisbane"
+   ],
+   "train": [
+    "ibm_kyoto",
+    "ibm_osaka"
+   ]
+  }
+ ],
+ "label_horizons_snapshots": [
+  1,
+  2,
+  3
+ ],
+ "observables": [
+  [
+   "t1_us",
+   "probe"
+  ],
+  [
+   "t2_us",
+   "probe"
+  ],
+  [
+   "readout_error",
+   "probe"
+  ]
+ ],
+ "pretrain_sources_allowed": [
+  "sim",
+  "silicon"
+ ],
+ "sources": [
+  "daqec"
+ ]
+}

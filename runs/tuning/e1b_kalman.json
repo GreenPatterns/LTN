@@ -1,0 +1,10 @@
+{
+ "value": 0.30005976496511994,
+ "params": {
+  "trend": 0,
+  "q_slope_cap": 0.037712854520522296,
+  "sigma_scale": 0.995603410773437
+ },
+ "n_trials": 50,
+ "n_trial_records": 50
+}

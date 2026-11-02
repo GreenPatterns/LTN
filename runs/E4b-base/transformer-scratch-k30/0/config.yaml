@@ -1,0 +1,10 @@
+exp: E4b-base
+model: transformer-scratch-k30
+seed: 0
+git_sha: dff652b65b18f0ba8723a0b264743ce0ac32f120
+start_time: '2026-07-18T13:18:14.133987+00:00'
+config:
+  k_days: 30
+  arm: scratch
+  base: transformer
+  tuned: false

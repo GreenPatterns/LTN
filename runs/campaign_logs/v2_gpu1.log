@@ -1,0 +1,18 @@
+[06:19:51] TUNE e1b ltn_v2
+[I 2026-07-17 01:19:54,410] A new study created in RDB with name: e1b_ltn_v2
+[I 2026-07-17 01:31:45,248] Trial 0 finished with value: 0.3043520934813786 and parameters: {'lr': 0.0012520653814999472, 'bptt': 16, 'carry_dim': 19, 'hidden': 78}. Best is trial 0 with value: 0.3043520934813786.
+[I 2026-07-17 01:43:44,016] Trial 1 finished with value: 0.32978006139919247 and parameters: {'lr': 0.0007501954443620128, 'bptt': 32, 'carry_dim': 41, 'hidden': 66}. Best is trial 0 with value: 0.3043520934813786.
+[I 2026-07-17 01:55:32,985] Trial 2 finished with value: 0.3078335346948788 and parameters: {'lr': 0.001368009527972693, 'bptt': 16, 'carry_dim': 8, 'hidden': 102}. Best is trial 0 with value: 0.3043520934813786.
+[I 2026-07-17 02:07:21,859] Trial 3 finished with value: 0.30189510263769764 and parameters: {'lr': 0.003600091192911611, 'bptt': 32, 'carry_dim': 20, 'hidden': 94}. Best is trial 3 with value: 0.30189510263769764.
+[I 2026-07-17 02:20:01,164] Trial 4 finished with value: 0.5272175058409934 and parameters: {'lr': 0.00017240460099242303, 'bptt': 64, 'carry_dim': 23, 'hidden': 56}. Best is trial 3 with value: 0.30189510263769764.
+[I 2026-07-17 02:31:56,918] Trial 5 finished with value: 0.341307375948103 and parameters: {'lr': 0.0003381514267820292, 'bptt': 16, 'carry_dim': 8, 'hidden': 75}. Best is trial 3 with value: 0.30189510263769764.
+[I 2026-07-17 02:43:50,861] Trial 6 finished with value: 0.3092722421696469 and parameters: {'lr': 0.0016756813861488488, 'bptt': 32, 'carry_dim': 16, 'hidden': 58}. Best is trial 3 with value: 0.30189510263769764.
+[I 2026-07-17 02:55:54,747] Trial 7 finished with value: 0.32462352174141257 and parameters: {'lr': 0.00248463381689824, 'bptt': 64, 'carry_dim': 12, 'hidden': 38}. Best is trial 3 with value: 0.30189510263769764.
+[I 2026-07-17 03:08:17,697] Trial 8 finished with value: 0.35855200104407414 and parameters: {'lr': 0.0004274218324036844, 'bptt': 32, 'carry_dim': 63, 'hidden': 36}. Best is trial 3 with value: 0.30189510263769764.
+[I 2026-07-17 03:20:49,992] Trial 9 finished with value: 0.4279878026830796 and parameters: {'lr': 0.0002616697456085449, 'bptt': 32, 'carry_dim': 20, 'hidden': 44}. Best is trial 3 with value: 0.30189510263769764.
+[I 2026-07-17 03:32:39,591] Trial 10 finished with value: 0.2995792625063703 and parameters: {'lr': 0.007892947573796393, 'bptt': 32, 'carry_dim': 35, 'hidden': 116}. Best is trial 10 with value: 0.2995792625063703.
+[I 2026-07-17 03:44:29,344] Trial 11 finished with value: 0.29971889623566417 and parameters: {'lr': 0.008423294132814821, 'bptt': 32, 'carry_dim': 31, 'hidden': 126}. Best is trial 10 with value: 0.2995792625063703.
+[I 2026-07-17 03:56:19,226] Trial 12 finished with value: 0.29918419781992517 and parameters: {'lr': 0.009843843715959533, 'bptt': 32, 'carry_dim': 36, 'hidden': 126}. Best is trial 12 with value: 0.29918419781992517.
+[I 2026-07-17 04:08:09,346] Trial 13 finished with value: 0.29933013682157394 and parameters: {'lr': 0.009963908343902692, 'bptt': 32, 'carry_dim': 39, 'hidden': 128}. Best is trial 12 with value: 0.29918419781992517.
+[I 2026-07-17 04:20:00,660] Trial 14 finished with value: 0.2998488236030798 and parameters: {'lr': 0.004435843995390098, 'bptt': 32, 'carry_dim': 53, 'hidden': 99}. Best is trial 12 with value: 0.29918419781992517.
+[I 2026-07-17 04:31:54,858] Trial 15 finished with value: 0.30019016743005217 and parameters: {'lr': 0.009146965956900892, 'bptt': 64, 'carry_dim': 29, 'hidden': 126}. Best is trial 12 with value: 0.29918419781992517.

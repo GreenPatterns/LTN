@@ -1,0 +1,81 @@
+[fixup] gaussian e1a seed0
+observable     horizon
+gate_error_2q  3          0.3019
+               9          0.2989
+               21         0.2847
+readout_error  3          0.1969
+               9          0.2236
+               21         0.2251
+t1_us          3          0.3404
+               9          0.3363
+               21         0.3492
+t2_us          3          0.4802
+               9          0.4911
+               21         0.5111
+
+mean NCRPS: 0.3366
+[fixup] gaussian e1a seed1
+observable     horizon
+gate_error_2q  3          0.2788
+               9          0.2868
+               21         0.2731
+readout_error  3          0.1823
+               9          0.1931
+               21         0.1775
+t1_us          3          0.2885
+               9          0.2763
+               21         0.2725
+t2_us          3          0.4157
+               9          0.4317
+               21         0.3803
+
+mean NCRPS: 0.2881
+[fixup] gaussian e1a seed2
+observable     horizon
+gate_error_2q  3          0.2809
+               9          0.2854
+               21         0.2775
+readout_error  3          0.1874
+               9          0.1947
+               21         0.1831
+t1_us          3          0.2872
+               9          0.2921
+               21         0.2865
+t2_us          3          0.4228
+               9          0.4255
+               21         0.3714
+
+mean NCRPS: 0.2912
+[fixup] gaussian e1a seed3
+observable     horizon
+gate_error_2q  3          0.2770
+               9          0.2726
+               21         0.2713
+readout_error  3          0.1705
+               9          0.1803
+               21         0.1681
+t1_us          3          0.2713
+               9          0.2479
+               21         0.2674
+t2_us          3          0.4160
+               9          0.4198
+               21         0.3907
+
+mean NCRPS: 0.2794
+[fixup] gaussian e1a seed4
+observable     horizon
+gate_error_2q  3          0.2757
+               9          0.2757
+               21         0.2760
+readout_error  3          0.1758
+               9          0.1902
+               21         0.1760
+t1_us          3          0.2892
+               9          0.2556
+               21         0.2677
+t2_us          3          0.4601
+               9          0.4402
+               21         0.3968
+
+mean NCRPS: 0.2899
+GAUSSIAN-FIXUP-DONE

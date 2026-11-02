@@ -1,0 +1,8 @@
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 32, "rmse": 0.16380791477101994, "auroc": 0.6698174957646696, "phase": "test", "n": 647}
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 33, "rmse": 0.2358986658677948, "auroc": 0.6044212293629325, "phase": "test", "n": 648}
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 34, "rmse": 0.1593183197893957, "auroc": 0.6412947088383092, "phase": "test", "n": 648}
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 35, "rmse": 0.18203121631545344, "auroc": 0.7199380511768303, "phase": "test", "n": 648}
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 36, "rmse": 0.16453370399744074, "auroc": 0.728112037372639, "phase": "test", "n": 647}
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 37, "rmse": 0.1782918152941023, "auroc": 0.7022329592161994, "phase": "test", "n": 648}
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 38, "rmse": 0.16525573859298173, "auroc": 0.6574531408308004, "phase": "test", "n": 648}
+{"exp": "E8", "model": "ltn_dm-otc", "seed": 0, "window": 39, "rmse": 0.1451803262528394, "auroc": 0.6395099153719843, "phase": "test", "n": 648}

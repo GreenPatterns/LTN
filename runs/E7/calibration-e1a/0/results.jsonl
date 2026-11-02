@@ -1,0 +1,5 @@
+{"exp": "E7", "model": "calibration-e1a", "seed": 0, "cell": "coverage", "level": 0.5, "raw": 0.44753086419753085, "temp_scaled": 0.47453703703703703}
+{"exp": "E7", "model": "calibration-e1a", "seed": 0, "cell": "coverage", "level": 0.8, "raw": 0.7114197530864198, "temp_scaled": 0.7391975308641975}
+{"exp": "E7", "model": "calibration-e1a", "seed": 0, "cell": "coverage", "level": 0.9, "raw": 0.8233024691358025, "temp_scaled": 0.8472222222222222}
+{"exp": "E7", "model": "calibration-e1a", "seed": 0, "cell": "coverage", "level": 0.95, "raw": 0.8904320987654321, "temp_scaled": 0.908179012345679}
+{"exp": "E7", "model": "calibration-e1a", "seed": 0, "cell": "nll", "raw": -0.8515548031783338, "temp_scaled": -0.8736220503005468}

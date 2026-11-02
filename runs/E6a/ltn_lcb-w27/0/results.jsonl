@@ -1,0 +1,1 @@
+{"exp": "E6a", "model": "ltn_lcb-w27", "seed": 0, "cum_regret": 0.1923574334101983, "mean_regret": 0.005343262039172175, "mean_reward": 0.3179637103835826, "n_rounds": 36}

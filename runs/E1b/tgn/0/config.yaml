@@ -1,0 +1,30 @@
+exp: E1b
+model: tgn
+seed: 0
+git_sha: 9d059d649d06d9d30e87a54c1745c9f7aef5b63e
+start_time: '2026-07-13T08:22:59.988719+00:00'
+config:
+  horizons:
+  - 1
+  - 3
+  - 7
+  - 14
+  time_unit_h: 24.0
+  seed: 0
+  lr: 0.00275857997401882
+  bptt: 16
+  width: 183
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - epc_1q/probe
+  - gate_error_2q/probe
+  norm_stats_keys:
+  - sim_sc|epc_1q|probe
+  - sim_sc|gate_error_2q|claimed
+  - sim_sc|gate_error_2q|probe
+  - sim_sc|readout_error|probe
+  - sim_sc|t1_us|probe
+  - sim_sc|t2_us|probe
+n_params: 282196

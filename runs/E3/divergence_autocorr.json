@@ -1,0 +1,815 @@
+{
+ "z_threshold": 2.0,
+ "label_horizons_snapshots": [
+  1,
+  2,
+  3
+ ],
+ "estimator": "r1 = sum (x_t - xbar)(x_{t+1} - xbar) / sum (x_t - xbar)^2",
+ "binary_exceed": {
+  "n_series": 12,
+  "n_series_defined": 9,
+  "n_series_degenerate": 3,
+  "series_length_median": 42.0,
+  "white_noise_band_95": 0.3024345659257001,
+  "max_abs_r1": 0.28021978021978017,
+  "median_abs_r1": 0.1293813713168552,
+  "mean_r1": -0.07059570844975253,
+  "n_outside_band": 0,
+  "series": [
+   {
+    "device": "ibm_osaka",
+    "entity_id": "device",
+    "n": 42,
+    "r1": NaN,
+    "mean": 0.0
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:2553fe71",
+    "n": 42,
+    "r1": -0.08648459383753503,
+    "mean": 0.19047619047619047
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:9805b47f",
+    "n": 42,
+    "r1": 0.1293813713168552,
+    "mean": 0.2619047619047619
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:e442bc5a",
+    "n": 42,
+    "r1": -0.10776942355889721,
+    "mean": 0.09523809523809523
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "device",
+    "n": 42,
+    "r1": NaN,
+    "mean": 0.0
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:2553fe71",
+    "n": 42,
+    "r1": -0.12473159024883164,
+    "mean": 0.30952380952380953
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:9805b47f",
+    "n": 42,
+    "r1": -0.20786203044267568,
+    "mean": 0.2619047619047619
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:e442bc5a",
+    "n": 42,
+    "r1": -0.27922077922077926,
+    "mean": 0.21428571428571427
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "device",
+    "n": 42,
+    "r1": NaN,
+    "mean": 0.0
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:2553fe71",
+    "n": 42,
+    "r1": -0.08145363408521304,
+    "mean": 0.09523809523809523
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:9805b47f",
+    "n": 42,
+    "r1": 0.28021978021978017,
+    "mean": 0.07142857142857142
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:e442bc5a",
+    "n": 42,
+    "r1": -0.1574404761904762,
+    "mean": 0.23809523809523808
+   }
+  ]
+ },
+ "binary_label": {
+  "n_series": 12,
+  "n_series_defined": 9,
+  "n_series_degenerate": 3,
+  "series_length_median": 42.0,
+  "white_noise_band_95": 0.3024345659257001,
+  "max_abs_r1": 0.641991341991342,
+  "median_abs_r1": 0.5376984126984127,
+  "mean_r1": 0.5466192357641371,
+  "n_outside_band": 9,
+  "series": [
+   {
+    "device": "ibm_osaka",
+    "entity_id": "device",
+    "n": 42,
+    "r1": NaN,
+    "mean": 0.0
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:2553fe71",
+    "n": 42,
+    "r1": 0.5010822510822511,
+    "mean": 0.47619047619047616
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:9805b47f",
+    "n": 42,
+    "r1": 0.641991341991342,
+    "mean": 0.5238095238095238
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:e442bc5a",
+    "n": 42,
+    "r1": 0.523809523809524,
+    "mean": 0.2857142857142857
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "device",
+    "n": 42,
+    "r1": NaN,
+    "mean": 0.0
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:2553fe71",
+    "n": 42,
+    "r1": 0.5781861816344576,
+    "mean": 0.6904761904761905
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:9805b47f",
+    "n": 42,
+    "r1": 0.45650183150183155,
+    "mean": 0.6190476190476191
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:e442bc5a",
+    "n": 42,
+    "r1": 0.5376984126984127,
+    "mean": 0.5714285714285714
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "device",
+    "n": 42,
+    "r1": NaN,
+    "mean": 0.0
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:2553fe71",
+    "n": 42,
+    "r1": 0.5238095238095238,
+    "mean": 0.2857142857142857
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:9805b47f",
+    "n": 42,
+    "r1": 0.5697554697554696,
+    "mean": 0.11904761904761904
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:e442bc5a",
+    "n": 42,
+    "r1": 0.5867385855944209,
+    "mean": 0.5476190476190477
+   }
+  ]
+ },
+ "continuous_rel_disc": {
+  "n_series": 36,
+  "n_series_defined": 36,
+  "n_series_degenerate": 0,
+  "series_length_median": 42.0,
+  "white_noise_band_95": 0.3024345659257001,
+  "max_abs_r1": 0.2994108996242524,
+  "median_abs_r1": 0.09901757503391104,
+  "mean_r1": -0.01504757295151565,
+  "n_outside_band": 0,
+  "series": [
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "device",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": 0.19528056070078403,
+    "mean": 0.035492801367633206
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "device",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": -0.006867882797152043,
+    "mean": 0.04003344993461133
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "device",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": -0.04112245348309283,
+    "mean": 0.0485049129907752
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:2553fe71",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.01008407524851651,
+    "mean": 0.06448135002632374
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:2553fe71",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": -0.09321731171962055,
+    "mean": 0.06936819044923828
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:2553fe71",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": 0.131410691264853,
+    "mean": 0.0895029853615726
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:9805b47f",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.17246297589513326,
+    "mean": 0.05424384735244385
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:9805b47f",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": 0.195067163006095,
+    "mean": 0.054187862000176036
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:9805b47f",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": 0.08787818119327385,
+    "mean": 0.09345169385340119
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:e442bc5a",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": 0.017881135802456802,
+    "mean": 0.06197707021520411
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:e442bc5a",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": -0.08743860483803106,
+    "mean": 0.08062454124059902
+   },
+   {
+    "device": "ibm_brisbane",
+    "entity_id": "sub:e442bc5a",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": -0.2787891970740309,
+    "mean": 0.09245904928439364
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "device",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.1217076640004821,
+    "mean": 0.04531073805248441
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "device",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": 0.05814476087647722,
+    "mean": 0.0369433222239684
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "device",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": -0.11735992207191558,
+    "mean": 0.054780396187454165
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:2553fe71",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.03708210529324697,
+    "mean": 0.06955852190740967
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:2553fe71",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": 0.2994108996242524,
+    "mean": 0.07161713630516137
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:2553fe71",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": -0.12349899907641905,
+    "mean": 0.10746729759145912
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:9805b47f",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.16066853292554154,
+    "mean": 0.08235851504040285
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:9805b47f",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": -0.08409871828717266,
+    "mean": 0.06873116958571619
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:9805b47f",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": 0.12746340948337984,
+    "mean": 0.07807769460414156
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:e442bc5a",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": 0.034321680467727544,
+    "mean": 0.06529932480736296
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:e442bc5a",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": -0.21046903878600254,
+    "mean": 0.06164113465132713
+   },
+   {
+    "device": "ibm_kyoto",
+    "entity_id": "sub:e442bc5a",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": 0.037983449368254596,
+    "mean": 0.09822802579219553
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "device",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.22865613767882834,
+    "mean": 0.039975002707077906
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "device",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": -0.025149827431388633,
+    "mean": 0.04827826619737806
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "device",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": 0.06326289413907304,
+    "mean": 0.058332406215337765
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:2553fe71",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.13641855096501507,
+    "mean": 0.06295320582894427
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:2553fe71",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": 0.1972978061170872,
+    "mean": 0.0639232477794079
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:2553fe71",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": -0.2669921803308476,
+    "mean": 0.0953996665665748
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:9805b47f",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": -0.019374015207629748,
+    "mean": 0.07698034791574604
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:9805b47f",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": 0.1048178383482015,
+    "mean": 0.08252382247170861
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:9805b47f",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": -0.019951690117945543,
+    "mean": 0.08403326675806917
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:e442bc5a",
+    "observable": "readout_error",
+    "n": 42,
+    "r1": 0.2626681997528885,
+    "mean": 0.060029919987032825
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:e442bc5a",
+    "observable": "t1_us",
+    "n": 42,
+    "r1": -0.032657541609763724,
+    "mean": 0.0592389695742687
+   },
+   {
+    "device": "ibm_osaka",
+    "entity_id": "sub:e442bc5a",
+    "observable": "t2_us",
+    "n": 42,
+    "r1": -0.08053387156159167,
+    "mean": 0.07816890358547757
+   }
+  ]
+ },
+ "binary_exceed_all_folds": {
+  "ibm_osaka": {
+   "train_devices": [
+    "ibm_brisbane",
+    "ibm_kyoto"
+   ],
+   "exceed": {
+    "n_series": 12,
+    "n_series_defined": 9,
+    "n_series_degenerate": 3,
+    "series_length_median": 42.0,
+    "white_noise_band_95": 0.3024345659257001,
+    "max_abs_r1": 0.28021978021978017,
+    "median_abs_r1": 0.08648459383753503,
+    "mean_r1": -0.019623867648935076,
+    "n_outside_band": 0,
+    "series": [
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.08145363408521304,
+      "mean": 0.09523809523809523
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": 0.28021978021978017,
+      "mean": 0.07142857142857142
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": 0.03847228040776424,
+      "mean": 0.2619047619047619
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.05952380952380956,
+      "mean": 0.2857142857142857
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": -0.08469487501745569,
+      "mean": 0.2619047619047619
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.20476190476190478,
+      "mean": 0.16666666666666666
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.08648459383753503,
+      "mean": 0.19047619047619047
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": 0.1293813713168552,
+      "mean": 0.2619047619047619
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.10776942355889721,
+      "mean": 0.09523809523809523
+     }
+    ]
+   }
+  },
+  "ibm_kyoto": {
+   "train_devices": [
+    "ibm_brisbane",
+    "ibm_osaka"
+   ],
+   "exceed": {
+    "n_series": 12,
+    "n_series_defined": 9,
+    "n_series_degenerate": 3,
+    "series_length_median": 42.0,
+    "white_noise_band_95": 0.3024345659257001,
+    "max_abs_r1": 0.27922077922077926,
+    "median_abs_r1": 0.12473159024883164,
+    "mean_r1": -0.0917645040627405,
+    "n_outside_band": 0,
+    "series": [
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.1476190476190476,
+      "mean": 0.16666666666666666
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": 0.08867438867438862,
+      "mean": 0.11904761904761904
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.09024883162814203,
+      "mean": 0.30952380952380953
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.12473159024883164,
+      "mean": 0.30952380952380953
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": -0.20786203044267568,
+      "mean": 0.2619047619047619
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.27922077922077926,
+      "mean": 0.21428571428571427
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.08648459383753503,
+      "mean": 0.19047619047619047
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": 0.1293813713168552,
+      "mean": 0.2619047619047619
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.10776942355889721,
+      "mean": 0.09523809523809523
+     }
+    ]
+   }
+  },
+  "ibm_brisbane": {
+   "train_devices": [
+    "ibm_kyoto",
+    "ibm_osaka"
+   ],
+   "exceed": {
+    "n_series": 12,
+    "n_series_defined": 9,
+    "n_series_degenerate": 3,
+    "series_length_median": 42.0,
+    "white_noise_band_95": 0.3024345659257001,
+    "max_abs_r1": 0.28021978021978017,
+    "median_abs_r1": 0.1293813713168552,
+    "mean_r1": -0.038946699599101485,
+    "n_outside_band": 0,
+    "series": [
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.08145363408521304,
+      "mean": 0.09523809523809523
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": 0.28021978021978017,
+      "mean": 0.07142857142857142
+     },
+     {
+      "device": "ibm_brisbane",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.1574404761904762,
+      "mean": 0.23809523809523808
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": 0.006214215891635195,
+      "mean": 0.2619047619047619
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": -0.15744047619047616,
+      "mean": 0.23809523809523808
+     },
+     {
+      "device": "ibm_kyoto",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.20476190476190473,
+      "mean": 0.16666666666666666
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "device",
+      "n": 42,
+      "r1": NaN,
+      "mean": 0.0
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:2553fe71",
+      "n": 42,
+      "r1": -0.08648459383753503,
+      "mean": 0.19047619047619047
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:9805b47f",
+      "n": 42,
+      "r1": 0.1293813713168552,
+      "mean": 0.2619047619047619
+     },
+     {
+      "device": "ibm_osaka",
+      "entity_id": "sub:e442bc5a",
+      "n": 42,
+      "r1": -0.07875457875457875,
+      "mean": 0.07142857142857142
+     }
+    ]
+   }
+  }
+ }
+}

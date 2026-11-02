@@ -1,0 +1,12 @@
+{
+ "value": 0.29832391424628624,
+ "params": {
+  "lr": 0.0044922673391136255,
+  "bptt": 16,
+  "carry_dim": 52,
+  "hidden": 109,
+  "evidence_rank": 4,
+  "rounds": 1
+ },
+ "n_trials": 50
+}

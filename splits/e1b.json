@@ -1,0 +1,69 @@
+{
+ "experiment": "E1b",
+ "grid_hours": 24.0,
+ "holdout_devices": [
+  "sim_dev_12",
+  "sim_dev_13",
+  "sim_dev_14",
+  "sim_dev_15"
+ ],
+ "horizons_steps": [
+  1,
+  3,
+  7,
+  14
+ ],
+ "norm_stats": {
+  "sim_sc|epc_1q|probe": [
+   0.0002824358100669414,
+   8.948578036454767e-05
+  ],
+  "sim_sc|gate_error_2q|claimed": [
+   0.005691602978106783,
+   0.0011282485087513912
+  ],
+  "sim_sc|gate_error_2q|probe": [
+   0.005691415371445925,
+   0.0014789371751337667
+  ],
+  "sim_sc|readout_error|probe": [
+   0.016292878020395907,
+   0.007561630905109191
+  ],
+  "sim_sc|t1_us|probe": [
+   192.45130923679383,
+   90.25952715004081
+  ],
+  "sim_sc|t2_us|probe": [
+   107.73074280327761,
+   37.17174146640441
+  ]
+ },
+ "observables": [
+  [
+   "t1_us",
+   "probe"
+  ],
+  [
+   "t2_us",
+   "probe"
+  ],
+  [
+   "readout_error",
+   "probe"
+  ],
+  [
+   "epc_1q",
+   "probe"
+  ],
+  [
+   "gate_error_2q",
+   "probe"
+  ]
+ ],
+ "sources": [
+  "sim"
+ ],
+ "train_end": "2026-05-07T00:00:00+00:00",
+ "val_end": "2026-05-25T00:00:00+00:00"
+}

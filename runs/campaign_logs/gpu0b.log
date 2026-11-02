@@ -1,0 +1,74 @@
+[chain] E6a
+[e6a] random w=5 s=0: cum_regret=1.3142
+[e6a] random w=5 s=1: cum_regret=1.7397
+[e6a] random w=5 s=2: cum_regret=1.4873
+[e6a] random w=5 s=3: cum_regret=1.4375
+[e6a] random w=5 s=4: cum_regret=1.7207
+[e6a] greedy_claimed w=5 s=0: cum_regret=0.1845
+[e6a] ltn_mean w=5 s=0: cum_regret=0.1879
+[e6a] oracle w=5 s=0: cum_regret=0.0000
+[e6a] ltn_lcb w=5 s=0: cum_regret=0.1759
+[e6a] random w=12 s=0: cum_regret=1.8485
+[e6a] random w=12 s=1: cum_regret=2.1539
+[e6a] random w=12 s=2: cum_regret=2.1737
+[e6a] random w=12 s=3: cum_regret=2.1528
+[e6a] random w=12 s=4: cum_regret=2.4608
+[e6a] greedy_claimed w=12 s=0: cum_regret=0.2565
+[e6a] ltn_mean w=12 s=0: cum_regret=0.2415
+[e6a] oracle w=12 s=0: cum_regret=0.0000
+[e6a] ltn_lcb w=12 s=0: cum_regret=0.2403
+[e6a] random w=27 s=0: cum_regret=1.6173
+[e6a] random w=27 s=1: cum_regret=2.0346
+[e6a] random w=27 s=2: cum_regret=2.0615
+[e6a] random w=27 s=3: cum_regret=1.8018
+[e6a] random w=27 s=4: cum_regret=2.2764
+[e6a] greedy_claimed w=27 s=0: cum_regret=0.1329
+[e6a] ltn_mean w=27 s=0: cum_regret=0.1913
+[e6a] oracle w=27 s=0: cum_regret=0.0000
+[e6a] ltn_lcb w=27 s=0: cum_regret=0.1924
+[chain] E7
+[e7:cal:e1a] T=1.059 cov90 raw=0.808 scaled=0.833
+[e7:cal:e1b] T=1.004 cov90 raw=0.902 scaled=0.903
+[e7] event rows: 20985 -> runs/E7/event_study.parquet
+[chain] E4b
+[e4b] seed0 k=0 pretrained: mean NCRPS 0.3086 (80 cells)
+[e4b] seed0 k=0 scratch: mean NCRPS 0.6121 (80 cells)
+[e4b] seed0 k=1 pretrained: mean NCRPS 0.3106 (80 cells)
+[e4b] seed0 k=1 scratch: mean NCRPS 0.5335 (80 cells)
+[e4b] seed0 k=7 pretrained: mean NCRPS 0.3072 (80 cells)
+[e4b] seed0 k=7 scratch: mean NCRPS 0.5066 (80 cells)
+[e4b] seed0 k=30 pretrained: mean NCRPS 0.3051 (80 cells)
+[e4b] seed0 k=30 scratch: mean NCRPS 0.5044 (80 cells)
+[e4b] seed1 k=0 pretrained: mean NCRPS 0.3098 (80 cells)
+[e4b] seed1 k=0 scratch: mean NCRPS 0.6049 (80 cells)
+[e4b] seed1 k=1 pretrained: mean NCRPS 0.3107 (80 cells)
+[e4b] seed1 k=1 scratch: mean NCRPS 0.5537 (80 cells)
+[e4b] seed1 k=7 pretrained: mean NCRPS 0.3082 (80 cells)
+[e4b] seed1 k=7 scratch: mean NCRPS 0.5380 (80 cells)
+[e4b] seed1 k=30 pretrained: mean NCRPS 0.3053 (80 cells)
+[e4b] seed1 k=30 scratch: mean NCRPS 0.5339 (80 cells)
+[e4b] seed2 k=0 pretrained: mean NCRPS 0.3085 (80 cells)
+[e4b] seed2 k=0 scratch: mean NCRPS 0.6041 (80 cells)
+[e4b] seed2 k=1 pretrained: mean NCRPS 0.3107 (80 cells)
+[e4b] seed2 k=1 scratch: mean NCRPS 0.5438 (80 cells)
+[e4b] seed2 k=7 pretrained: mean NCRPS 0.3071 (80 cells)
+[e4b] seed2 k=7 scratch: mean NCRPS 0.5306 (80 cells)
+[e4b] seed2 k=30 pretrained: mean NCRPS 0.3050 (80 cells)
+[e4b] seed2 k=30 scratch: mean NCRPS 0.5302 (80 cells)
+[e4b] seed3 k=0 pretrained: mean NCRPS 0.3078 (80 cells)
+[e4b] seed3 k=0 scratch: mean NCRPS 0.5969 (80 cells)
+[e4b] seed3 k=1 pretrained: mean NCRPS 0.3097 (80 cells)
+[e4b] seed3 k=1 scratch: mean NCRPS 0.5386 (80 cells)
+[e4b] seed3 k=7 pretrained: mean NCRPS 0.3068 (80 cells)
+[e4b] seed3 k=7 scratch: mean NCRPS 0.5229 (80 cells)
+[e4b] seed3 k=30 pretrained: mean NCRPS 0.3044 (80 cells)
+[e4b] seed3 k=30 scratch: mean NCRPS 0.5241 (80 cells)
+[e4b] seed4 k=0 pretrained: mean NCRPS 0.3099 (80 cells)
+[e4b] seed4 k=0 scratch: mean NCRPS 0.6085 (80 cells)
+[e4b] seed4 k=1 pretrained: mean NCRPS 0.3101 (80 cells)
+[e4b] seed4 k=1 scratch: mean NCRPS 0.5536 (80 cells)
+[e4b] seed4 k=7 pretrained: mean NCRPS 0.3071 (80 cells)
+[e4b] seed4 k=7 scratch: mean NCRPS 0.5352 (80 cells)
+[e4b] seed4 k=30 pretrained: mean NCRPS 0.3048 (80 cells)
+[e4b] seed4 k=30 scratch: mean NCRPS 0.5367 (80 cells)
+GPU0-CHAIN-DONE

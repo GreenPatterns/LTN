@@ -1,0 +1,10 @@
+exp: E4b-base
+model: tgn-scratch-k0
+seed: 0
+git_sha: 5442ece7f925919b6ae35f097d1e95b0751f4126
+start_time: '2026-07-18T13:03:35.208149+00:00'
+config:
+  k_days: 0
+  arm: scratch
+  base: tgn
+  tuned: false

@@ -1,0 +1,8 @@
+exp: E4b
+model: scratch-k30
+seed: 3
+git_sha: d76f24c6b1b9e987ad0a861a81ace1d77e452b21
+start_time: '2026-07-16T09:47:50.029827+00:00'
+config:
+  k_days: 30
+  arm: scratch

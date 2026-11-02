@@ -1,0 +1,10 @@
+exp: E4b-base
+model: transformer-pretrained-k1
+seed: 0
+git_sha: dff652b65b18f0ba8723a0b264743ce0ac32f120
+start_time: '2026-07-18T13:09:23.186389+00:00'
+config:
+  k_days: 1
+  arm: pretrained
+  base: transformer
+  tuned: false

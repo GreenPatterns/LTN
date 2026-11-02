@@ -1,0 +1,8 @@
+exp: E8
+model: ltn_dm-alpha
+seed: 1
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T09:50:15.877252+00:00'
+config:
+  dataset: alpha
+  n_params: 2679

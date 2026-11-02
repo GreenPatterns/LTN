@@ -1,0 +1,10 @@
+{
+ "value": 0.30058307010175167,
+ "params": {
+  "window": 89,
+  "kernel": "rbf",
+  "sigma_scale": 1.0071682173208822
+ },
+ "n_trials": 50,
+ "n_trial_records": 50
+}

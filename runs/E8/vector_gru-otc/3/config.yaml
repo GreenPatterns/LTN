@@ -1,0 +1,8 @@
+exp: E8
+model: vector_gru-otc
+seed: 3
+git_sha: e8b4daabbd8a662fc13404afda2e21570c3955a4
+start_time: '2026-07-15T09:40:27.925392+00:00'
+config:
+  dataset: otc
+  n_params: 2697

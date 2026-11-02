@@ -1,0 +1,8 @@
+exp: E7
+model: calibration-e1b
+seed: 0
+git_sha: 502fea1cc0173cdc041d1baad1cf39c502f2758e
+start_time: '2026-07-16T02:24:55.370186+00:00'
+config:
+  ckpt: runs/E1b/ltn/0/model.pt
+  temperature: 0.9920301314659326

@@ -1,0 +1,9 @@
+exp: E6a
+model: random-w27
+seed: 4
+git_sha: 502fea1cc0173cdc041d1baad1cf39c502f2758e
+start_time: '2026-07-16T02:24:18.628120+00:00'
+config:
+  width: 27
+  kappa: 1.0
+  window: test-region (declared)

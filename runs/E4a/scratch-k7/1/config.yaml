@@ -1,0 +1,8 @@
+exp: E4a
+model: scratch-k7
+seed: 1
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T13:10:06.003429+00:00'
+config:
+  k_days: 7
+  arm: scratch

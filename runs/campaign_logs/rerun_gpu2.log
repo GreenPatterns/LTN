@@ -1,0 +1,279 @@
+[09:26:05] E8
+[e8:otc] seed0 ltn_dm: test RMSE=0.1743 AUROC=0.670
+[e8:otc] seed0 vector_gru: test RMSE=0.2774 AUROC=0.434
+[e8:otc] seed1 ltn_dm: test RMSE=0.1739 AUROC=0.625
+[e8:otc] seed1 vector_gru: test RMSE=0.3006 AUROC=0.467
+[e8:otc] seed2 ltn_dm: test RMSE=0.1745 AUROC=0.551
+[e8:otc] seed2 vector_gru: test RMSE=0.3845 AUROC=0.562
+[e8:otc] seed3 ltn_dm: test RMSE=0.1735 AUROC=0.652
+[e8:otc] seed3 vector_gru: test RMSE=0.3144 AUROC=0.533
+[e8:otc] seed4 ltn_dm: test RMSE=0.1734 AUROC=0.642
+[e8:otc] seed4 vector_gru: test RMSE=0.2401 AUROC=0.608
+[e8:alpha] seed0 ltn_dm: test RMSE=0.1566 AUROC=0.625
+[e8:alpha] seed0 vector_gru: test RMSE=0.2998 AUROC=0.380
+[e8:alpha] seed1 ltn_dm: test RMSE=0.1566 AUROC=0.567
+[e8:alpha] seed1 vector_gru: test RMSE=0.2745 AUROC=0.409
+[e8:alpha] seed2 ltn_dm: test RMSE=0.1575 AUROC=0.510
+[e8:alpha] seed2 vector_gru: test RMSE=0.2981 AUROC=0.372
+[e8:alpha] seed3 ltn_dm: test RMSE=0.1563 AUROC=0.614
+[e8:alpha] seed3 vector_gru: test RMSE=0.2714 AUROC=0.379
+[e8:alpha] seed4 ltn_dm: test RMSE=0.1566 AUROC=0.590
+[e8:alpha] seed4 vector_gru: test RMSE=0.1852 AUROC=0.585
+[15:02:33] DABL e1b d=2 s0
+observable     horizon
+epc_1q         1          0.3815
+               3          0.3800
+               7          0.3795
+               14         0.3803
+gate_error_2q  1          0.4674
+               3          0.4671
+               7          0.4672
+               14         0.4671
+readout_error  1          0.2503
+               3          0.2503
+               7          0.2506
+               14         0.2506
+t1_us          1          0.2129
+               3          0.2126
+               7          0.2132
+               14         0.2141
+t2_us          1          0.2314
+               3          0.2304
+               7          0.2312
+               14         0.2301
+
+mean NCRPS: 0.3084
+[15:43:40] DABL e1b d=2 s1
+observable     horizon
+epc_1q         1          0.3807
+               3          0.3796
+               7          0.3795
+               14         0.3808
+gate_error_2q  1          0.4686
+               3          0.4677
+               7          0.4677
+               14         0.4674
+readout_error  1          0.2492
+               3          0.2492
+               7          0.2496
+               14         0.2496
+t1_us          1          0.2126
+               3          0.2124
+               7          0.2134
+               14         0.2144
+t2_us          1          0.2312
+               3          0.2304
+               7          0.2313
+               14         0.2303
+
+mean NCRPS: 0.3083
+[16:31:19] DABL e1b d=2 s2
+observable     horizon
+epc_1q         1          0.3800
+               3          0.3793
+               7          0.3794
+               14         0.3807
+gate_error_2q  1          0.4719
+               3          0.4726
+               7          0.4727
+               14         0.4728
+readout_error  1          0.2498
+               3          0.2498
+               7          0.2500
+               14         0.2500
+t1_us          1          0.2136
+               3          0.2133
+               7          0.2137
+               14         0.2144
+t2_us          1          0.2347
+               3          0.2339
+               7          0.2348
+               14         0.2337
+
+mean NCRPS: 0.3101
+[17:08:49] DABL e1b d=4 s0
+observable     horizon
+epc_1q         1          0.3825
+               3          0.3811
+               7          0.3809
+               14         0.3817
+gate_error_2q  1          0.4705
+               3          0.4695
+               7          0.4699
+               14         0.4701
+readout_error  1          0.2501
+               3          0.2500
+               7          0.2502
+               14         0.2502
+t1_us          1          0.2110
+               3          0.2113
+               7          0.2123
+               14         0.2133
+t2_us          1          0.2342
+               3          0.2338
+               7          0.2350
+               14         0.2344
+
+mean NCRPS: 0.3096
+[17:41:46] DABL e1b d=4 s1
+observable     horizon
+epc_1q         1          0.3802
+               3          0.3795
+               7          0.3795
+               14         0.3809
+gate_error_2q  1          0.4705
+               3          0.4705
+               7          0.4711
+               14         0.4709
+readout_error  1          0.2503
+               3          0.2503
+               7          0.2508
+               14         0.2510
+t1_us          1          0.2142
+               3          0.2137
+               7          0.2144
+               14         0.2154
+t2_us          1          0.2326
+               3          0.2321
+               7          0.2330
+               14         0.2319
+
+mean NCRPS: 0.3096
+[18:19:51] DABL e1b d=4 s2
+observable     horizon
+epc_1q         1          0.3802
+               3          0.3792
+               7          0.3792
+               14         0.3805
+gate_error_2q  1          0.4710
+               3          0.4699
+               7          0.4695
+               14         0.4692
+readout_error  1          0.2499
+               3          0.2498
+               7          0.2502
+               14         0.2502
+t1_us          1          0.2121
+               3          0.2118
+               7          0.2124
+               14         0.2132
+t2_us          1          0.2313
+               3          0.2307
+               7          0.2318
+               14         0.2309
+
+mean NCRPS: 0.3086
+[19:04:07] DABL e1b d=8 s0
+observable     horizon
+epc_1q         1          0.3809
+               3          0.3795
+               7          0.3793
+               14         0.3800
+gate_error_2q  1          0.4681
+               3          0.4679
+               7          0.4681
+               14         0.4680
+readout_error  1          0.2503
+               3          0.2507
+               7          0.2514
+               14         0.2518
+t1_us          1          0.2105
+               3          0.2101
+               7          0.2107
+               14         0.2116
+t2_us          1          0.2322
+               3          0.2316
+               7          0.2325
+               14         0.2316
+
+mean NCRPS: 0.3083
+[21:53:35] DABL e1b d=8 s1
+observable     horizon
+epc_1q         1          0.3817
+               3          0.3812
+               7          0.3812
+               14         0.3824
+gate_error_2q  1          0.4674
+               3          0.4671
+               7          0.4673
+               14         0.4670
+readout_error  1          0.2502
+               3          0.2504
+               7          0.2507
+               14         0.2510
+t1_us          1          0.2156
+               3          0.2156
+               7          0.2164
+               14         0.2174
+t2_us          1          0.2320
+               3          0.2316
+               7          0.2328
+               14         0.2321
+
+mean NCRPS: 0.3096
+[00:50:55] DABL e1b d=8 s2
+observable     horizon
+epc_1q         1          0.3856
+               3          0.3843
+               7          0.3841
+               14         0.3848
+gate_error_2q  1          0.4697
+               3          0.4692
+               7          0.4691
+               14         0.4688
+readout_error  1          0.2509
+               3          0.2510
+               7          0.2512
+               14         0.2508
+t1_us          1          0.2148
+               3          0.2148
+               7          0.2155
+               14         0.2158
+t2_us          1          0.2313
+               3          0.2309
+               7          0.2319
+               14         0.2312
+
+mean NCRPS: 0.3103
+[02:22:51] E6 (sim+logged)
+[e6a] random w=5 s=0: cum_regret=1.3142
+[e6a] random w=5 s=1: cum_regret=1.7397
+[e6a] random w=5 s=2: cum_regret=1.4873
+[e6a] random w=5 s=3: cum_regret=1.4375
+[e6a] random w=5 s=4: cum_regret=1.7207
+[e6a] greedy_claimed w=5 s=0: cum_regret=0.1845
+[e6a] ltn_mean w=5 s=0: cum_regret=0.2016
+[e6a] oracle w=5 s=0: cum_regret=0.0000
+[e6a] ltn_lcb w=5 s=0: cum_regret=0.1568
+[e6a] random w=12 s=0: cum_regret=1.8485
+[e6a] random w=12 s=1: cum_regret=2.1539
+[e6a] random w=12 s=2: cum_regret=2.1737
+[e6a] random w=12 s=3: cum_regret=2.1528
+[e6a] random w=12 s=4: cum_regret=2.4608
+[e6a] greedy_claimed w=12 s=0: cum_regret=0.2565
+[e6a] ltn_mean w=12 s=0: cum_regret=0.2279
+[e6a] oracle w=12 s=0: cum_regret=0.0000
+[e6a] ltn_lcb w=12 s=0: cum_regret=0.2256
+[e6a] random w=27 s=0: cum_regret=1.6173
+[e6a] random w=27 s=1: cum_regret=2.0346
+[e6a] random w=27 s=2: cum_regret=2.0615
+[e6a] random w=27 s=3: cum_regret=1.8018
+[e6a] random w=27 s=4: cum_regret=2.2764
+[e6a] greedy_claimed w=27 s=0: cum_regret=0.1329
+[e6a] ltn_mean w=27 s=0: cum_regret=0.1924
+[e6a] oracle w=27 s=0: cum_regret=0.0000
+[e6a] ltn_lcb w=27 s=0: cum_regret=0.1924
+[e6b] random s=0: cum_regret=0.0043
+[e6b] random s=1: cum_regret=0.0049
+[e6b] random s=2: cum_regret=0.0030
+[e6b] random s=3: cum_regret=0.0036
+[e6b] random s=4: cum_regret=0.0010
+[e6b] oracle s=0: cum_regret=0.0000
+[e6b] greedy_claimed s=0: cum_regret=0.0043
+[e6b] ltn_mean s=0: cum_regret=0.0043
+[e6b] ltn_lcb s=0: cum_regret=0.0043
+[02:24:21] E7
+[e7:cal:e1a] T=1.066 cov90 raw=0.823 scaled=0.847
+[e7:cal:e1b] T=0.992 cov90 raw=0.906 scaled=0.904
+[e7] event rows: 20985 -> runs/E7/event_study.parquet
+[02:26:01] GPU2-LANE-DONE

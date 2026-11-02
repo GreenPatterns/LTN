@@ -1,0 +1,31 @@
+exp: DSWEEP-v2-e1b
+model: d8
+seed: 2
+git_sha: d7c3f7dcd5a329931a78ff656146f7fc124e15fb
+start_time: '2026-07-17T13:32:49.645638+00:00'
+config:
+  horizons:
+  - 1
+  - 3
+  - 7
+  - 14
+  time_unit_h: 24.0
+  seed: 2
+  lr: 0.006534717282090874
+  bptt: 16
+  carry_dim: 42
+  hidden: 99
+  d: 8
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - epc_1q/probe
+  - gate_error_2q/probe
+  norm_stats_keys:
+  - sim_sc|epc_1q|probe
+  - sim_sc|gate_error_2q|claimed
+  - sim_sc|gate_error_2q|probe
+  - sim_sc|readout_error|probe
+  - sim_sc|t1_us|probe
+  - sim_sc|t2_us|probe

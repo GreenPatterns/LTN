@@ -1,0 +1,15 @@
+[I 2026-07-17 04:42:22,189] Using an existing study with name 'e1b_ltn_v2' instead of creating a new one.
+[I 2026-07-17 04:54:27,115] Trial 17 finished with value: 0.29995587511372956 and parameters: {'lr': 0.00477759389202013, 'bptt': 32, 'carry_dim': 45, 'hidden': 87}. Best is trial 12 with value: 0.29918419781992517.
+[I 2026-07-17 05:06:30,422] Trial 22 finished with value: 0.300423168001503 and parameters: {'lr': 0.009260816092292432, 'bptt': 64, 'carry_dim': 26, 'hidden': 111}. Best is trial 12 with value: 0.29918419781992517.
+[I 2026-07-17 05:18:31,568] Trial 25 finished with value: 0.30254308670457936 and parameters: {'lr': 0.0028334299483256603, 'bptt': 32, 'carry_dim': 35, 'hidden': 128}. Best is trial 12 with value: 0.29918419781992517.
+[I 2026-07-17 05:23:58,519] Trial 28 finished with value: 0.3051921363560607 and parameters: {'lr': 0.006450416765440318, 'bptt': 16, 'carry_dim': 52, 'hidden': 104}. Best is trial 12 with value: 0.29918419781992517.
+[I 2026-07-17 05:36:00,861] Trial 30 finished with value: 0.29946417091467437 and parameters: {'lr': 0.006468227106895984, 'bptt': 32, 'carry_dim': 55, 'hidden': 94}. Best is trial 29 with value: 0.2990268705875815.
+[I 2026-07-17 05:45:03,145] Trial 33 finished with value: 0.3016140264402809 and parameters: {'lr': 0.002154235373659274, 'bptt': 16, 'carry_dim': 63, 'hidden': 71}. Best is trial 29 with value: 0.2990268705875815.
+[I 2026-07-17 05:51:41,143] Trial 37 finished with value: 0.30328654933001997 and parameters: {'lr': 0.0069302781248112896, 'bptt': 16, 'carry_dim': 42, 'hidden': 99}. Best is trial 29 with value: 0.2990268705875815.
+[I 2026-07-17 06:03:41,559] Trial 38 finished with value: 0.3012314115005876 and parameters: {'lr': 0.0010738754601940926, 'bptt': 16, 'carry_dim': 52, 'hidden': 92}. Best is trial 36 with value: 0.2988066590138898.
+[I 2026-07-17 06:15:56,187] Trial 41 finished with value: 0.3744855581329092 and parameters: {'lr': 0.00011030897039317975, 'bptt': 16, 'carry_dim': 39, 'hidden': 101}. Best is trial 36 with value: 0.2988066590138898.
+[I 2026-07-17 06:25:32,096] Trial 44 finished with value: 0.30124620642061284 and parameters: {'lr': 0.005137957320204199, 'bptt': 16, 'carry_dim': 30, 'hidden': 118}. Best is trial 36 with value: 0.2988066590138898.
+[I 2026-07-17 06:38:16,264] Using an existing study with name 'e1b_ltn_v2' instead of creating a new one.
+[I 2026-07-17 06:50:30,428] Trial 49 finished with value: 0.3023970564554707 and parameters: {'lr': 0.0036952286481802313, 'bptt': 32, 'carry_dim': 56, 'hidden': 32}. Best is trial 36 with value: 0.2988066590138898.
+[I 2026-07-17 07:04:31,805] Trial 53 finished with value: 0.3013786727492747 and parameters: {'lr': 0.00758205882278258, 'bptt': 32, 'carry_dim': 10, 'hidden': 76}. Best is trial 36 with value: 0.2988066590138898.
+{"value": 0.2988066590138898, "params": {"lr": 0.006534717282090874, "bptt": 16, "carry_dim": 42, "hidden": 99}, "n_trials": 54}

@@ -1,0 +1,1 @@
+{"exp": "E6a", "model": "ltn_mean-w5", "seed": 0, "cum_regret": 0.20157364739696437, "mean_regret": 0.005599267983249011, "mean_reward": 0.8425800155168348, "n_rounds": 36}

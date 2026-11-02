@@ -1,0 +1,33 @@
+exp: E1b
+model: ltn
+seed: 1
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T15:25:44.194350+00:00'
+config:
+  horizons:
+  - 1
+  - 3
+  - 7
+  - 14
+  time_unit_h: 24.0
+  seed: 1
+  lr: 0.0044922673391136255
+  bptt: 16
+  carry_dim: 52
+  hidden: 109
+  evidence_rank: 4
+  rounds: 1
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - epc_1q/probe
+  - gate_error_2q/probe
+  norm_stats_keys:
+  - sim_sc|epc_1q|probe
+  - sim_sc|gate_error_2q|claimed
+  - sim_sc|gate_error_2q|probe
+  - sim_sc|readout_error|probe
+  - sim_sc|t1_us|probe
+  - sim_sc|t2_us|probe
+n_params: 79616

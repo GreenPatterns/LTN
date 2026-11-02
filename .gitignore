@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Raw downloads and the rebuilt telemetry lake (public data; see README).
+# Anchored to the top level so that the package's ltn/data/ is NOT excluded.
+/data/
+
+# LaTeX build output
+paper/build/
+
+# Per-pair forecast files (1.4 GB in total), not kept in git
+runs/**/predictions.parquet

@@ -1,0 +1,34 @@
+{
+ "e6a": {
+  "jobs_widths": [
+   5,
+   12,
+   27
+  ],
+  "lcb_kappa": 1.0,
+  "policies": [
+   "random",
+   "greedy_claimed",
+   "ltn_mean",
+   "ltn_lcb",
+   "oracle"
+  ],
+  "replay_days": [
+   91,
+   180
+  ],
+  "seed": 0,
+  "world": "sim"
+ },
+ "e6b": {
+  "choice_set": "3 backends x logged subgraphs per session x distance",
+  "declared": "secondary [DEV-5]",
+  "outcome": [
+   "logical_error_rate",
+   "delivered"
+  ],
+  "region": "test (after e1a val_end)",
+  "world": "daqec_logged"
+ },
+ "experiment": "E6"
+}

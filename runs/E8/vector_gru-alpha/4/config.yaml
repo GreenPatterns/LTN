@@ -1,0 +1,8 @@
+exp: E8
+model: vector_gru-alpha
+seed: 4
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T10:01:01.214219+00:00'
+config:
+  dataset: alpha
+  n_params: 2697

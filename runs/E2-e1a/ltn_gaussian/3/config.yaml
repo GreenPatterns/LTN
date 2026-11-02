@@ -1,0 +1,29 @@
+exp: E2-e1a
+model: ltn_gaussian
+seed: 3
+git_sha: 7dcb14d0657cb4ddc17647785b25df09da913c95
+start_time: '2026-07-15T11:56:11.851197+00:00'
+config:
+  horizons:
+  - 3
+  - 9
+  - 21
+  time_unit_h: 8.0
+  seed: 3
+  lr: 0.006483307154370959
+  bptt: 16
+  carry_dim: 59
+  hidden: 94
+  evidence_rank: 2
+  rounds: 1
+  observables:
+  - t1_us/probe
+  - t2_us/probe
+  - readout_error/probe
+  - gate_error_2q/claimed
+  norm_stats_keys:
+  - ibm_sc|gate_error_2q|claimed
+  - ibm_sc|readout_error|probe
+  - ibm_sc|t1_us|probe
+  - ibm_sc|t2_us|probe
+n_params: 77888

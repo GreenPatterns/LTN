@@ -1,0 +1,1 @@
+{"exp": "E6a", "model": "greedy_claimed-w5", "seed": 0, "cum_regret": 0.1845024781543484, "mean_regret": 0.005125068837620789, "mean_reward": 0.843054214662463, "n_rounds": 36}
