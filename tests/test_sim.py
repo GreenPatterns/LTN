@@ -152,6 +152,37 @@ def test_claimed_refreshes_exactly_at_recals(small_run):
     assert stale_h.max() > first_stale.min()
 
 
+def test_recal_groups_stagger_cal_ts():
+    """recal_groups=G: one renewal stream and one cal_ts per group, so a device
+    snapshot carries G distinct cal_ts and each claim refreshes only at its own
+    group's recalibrations."""
+    cfg = small_cfg(recal_groups=3, recal_median_h=2.0)
+    events, _ = FleetSim(cfg, 20260712).run(20, 3)
+    dev = events[events["device"] == "sim_dev_00"]
+    per_snap = dev.groupby("ts")["cal_ts"].nunique().iloc[1:]  # t=0: all calibrated at once
+    assert (per_snap == 3).mean() > 0.9
+    claimed = dev[(dev["observable"] == "t1_us") & (dev["channel"] == "claimed")]
+    for _, g in claimed.groupby("entity_id"):
+        assert (g.groupby("cal_ts")["value"].nunique() == 1).all()
+
+
+def test_daily_reset_gives_one_day_period():
+    """A daily full recalibration that resets a within-day log-T1 decline makes the
+    3-per-day series oscillate with a one-day period: negative lag-1 and positive
+    lag-3 autocorrelation once the sawtooth dominates the slow drift."""
+    cfg = FleetConfig(topologies=[{"kind": "linear", "n": 6}], recal_groups=3,
+                      reset_hour=23.0, reset_decay_per_h=0.03, ou_sigma_t1=0.02,
+                      tls_on_rate=1e-9, degrade_rate_per_day=1e-9)
+    _, truth = FleetSim(cfg, 20260712).run(60, 3)
+    t1 = truth[truth["observable"] == "t1_us"]
+    ac1, ac3 = [], []
+    for _, g in t1.groupby("entity_id"):
+        x = np.log(g.sort_values("ts")["value"].to_numpy())
+        ac1.append(np.corrcoef(x[:-1], x[1:])[0, 1])
+        ac3.append(np.corrcoef(x[:-3], x[3:])[0, 1])
+    assert np.mean(ac1) < 0 < np.mean(ac3)
+
+
 def test_probe_tracks_truth_and_claimed_goes_stale(small_run):
     cfg, events, truth = small_run
     keys = ["device", "entity_id", "observable", "ts"]

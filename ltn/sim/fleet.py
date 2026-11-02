@@ -15,6 +15,11 @@ Guarantees implemented (unit-tested in tests/test_sim.py):
 * **Recalibration renewal** per device (LogNormal intervals, median ~8 h to
   match DAQEC cadence) refreshes the claimed snapshot and partially re-pins
   the truth latents.
+* **Recalibration-reset process** (opt-in; the defaults reproduce the original
+  fleet bit-for-bit): ``recal_groups`` splits each device into independently
+  recalibrated groups (one renewal stream and one ``cal_ts`` per group), and a
+  daily full recalibration at ``reset_hour`` resets a log-T1 decline of
+  ``reset_decay_per_h`` per hour, centred on the day.
 * **Bitwise determinism**: all randomness flows through per-device
   ``numpy.random.default_rng([seed, device_index])`` generators, so identical
   (config, seed) give bitwise-identical outputs.
@@ -97,6 +102,11 @@ class FleetConfig:
     recal_kappa: float = 0.35
     recal_jump_sigma: float = 0.05
 
+    # recalibration-reset process (defaults: one device-wide stream, no daily reset)
+    recal_groups: int = 1            # independent recalibration streams per device
+    reset_hour: float = -1.0         # hour of the daily full recalibration; < 0 = off
+    reset_decay_per_h: float = 0.0   # log-T1 decline per hour since the daily reset
+
     # observation noise (relative)
     claimed_noise: float = 0.02
     probe_noise: float = 0.04
@@ -167,8 +177,11 @@ class FleetSim:
         edge_u: np.ndarray,
         edge_v: np.ndarray,
         rng: np.random.Generator,
+        t1_offset: np.ndarray | None = None,
     ) -> dict[str, np.ndarray]:
         cfg = self.cfg
+        if t1_offset is not None:
+            x_t1 = x_t1 + t1_offset
         t1 = np.exp(x_t1) * tls_fac
         tphi = np.exp(x_tphi)
         t2 = 1.0 / (1.0 / (2.0 * t1) + 1.0 / tphi)
@@ -232,13 +245,26 @@ class FleetSim:
         tls_on = np.zeros(n_q, dtype=bool)
         tls_fac = np.ones(n_q, dtype=np.float64)
 
-        recal_d = proc.sample_recal_times(
-            n_days * 24.0, cfg.recal_median_h, cfg.recal_sigma_log, rng) / 24.0
+        n_groups = max(int(cfg.recal_groups), 1)
+        q_group = np.arange(n_q) % n_groups
+        e_group = q_group[edge_u]  # a coupler is recalibrated with its lower qubit
+        recal_streams = [
+            proc.sample_recal_times(n_days * 24.0, cfg.recal_median_h, cfg.recal_sigma_log, rng) / 24.0
+            for _ in range(n_groups)]
         episodes = proc.sample_degradation_episodes(
             n_days, cfg.degrade_rate_per_day, cfg.degrade_mean_days,
             cfg.degrade_drift_per_day, rng)
         offline = proc.sample_offline_days(
             n_days, cfg.offline_p_mcar, cfg.offline_burst_rate, cfg.offline_burst_geo_p, rng)
+        # daily full recalibration: a sweep that recalibrates the groups one after
+        # another within the hour starting at reset_hour, each anchoring its own reset
+        reset_h = cfg.reset_hour + np.arange(n_groups) / n_groups
+        if cfg.reset_hour >= 0:
+            for g in range(n_groups):
+                recal_streams[g] = np.sort(np.concatenate(
+                    [recal_streams[g], (np.arange(n_days) * 24.0 + reset_h[g]) / 24.0]))
+        # recalibration events in time order as (day, group)
+        events = sorted((float(t), g) for g, ts in enumerate(recal_streams) for t in ts)
 
         n_snap = int(n_days * snapshots_per_day)
         dt = 1.0 / snapshots_per_day
@@ -259,41 +285,61 @@ class FleetSim:
                 state["on"], state["fac"], cfg.tls_on_rate, cfg.tls_off_rate,
                 cfg.tls_factor_lo, cfg.tls_factor_hi, dtau, rng)
 
+        def reset_offset(t_day: float) -> np.ndarray | None:
+            """Per-qubit log-T1 sawtooth: declines after its group's daily reset, centred on the day."""
+            if cfg.reset_hour < 0 or not cfg.reset_decay_per_h:
+                return None
+            since_h = (t_day * 24.0 - reset_h[q_group]) % 24.0
+            return -cfg.reset_decay_per_h * (since_h - 12.0)
+
         def truth_now(t_day: float) -> dict[str, np.ndarray]:
             return self._truth_obs(
                 state["t1"], state["tphi"], state["ro"], state["cp"], state["fac"],
                 mu_t1 + proc.degradation_offset(episodes, t_day),
-                edge_u, edge_v, rng)
+                edge_u, edge_v, rng, t1_offset=reset_offset(t_day))
 
-        def repin(t_day: float) -> None:
+        def repin(t_day: float, gq: np.ndarray | None = None, ge: np.ndarray | None = None) -> None:
+            """Partially re-pin the latents; gq/ge restrict it to one calibration group."""
             mu_eff = mu_t1 + proc.degradation_offset(episodes, t_day)
-            state["t1"] = proc.recal_repin(state["t1"], mu_eff, cfg.recal_kappa, cfg.recal_jump_sigma, rng)
-            state["tphi"] = proc.recal_repin(state["tphi"], mu_tphi, cfg.recal_kappa, cfg.recal_jump_sigma, rng)
-            state["ro"] = proc.recal_repin(state["ro"], mu_ro, cfg.recal_kappa, cfg.recal_jump_sigma, rng)
-            state["cp"] = proc.recal_repin(state["cp"], mu_cp, cfg.recal_kappa, cfg.recal_jump_sigma, rng)
+            for key, mu, sel in (("t1", mu_eff, gq), ("tphi", mu_tphi, gq),
+                                 ("ro", mu_ro, gq), ("cp", mu_cp, ge)):
+                new = proc.recal_repin(state[key], mu, cfg.recal_kappa, cfg.recal_jump_sigma, rng)
+                state[key] = new if sel is None else np.where(sel, new, state[key])
 
         # initial calibration at t = 0
         claimed = self._observe(truth_now(0.0), cfg.claimed_noise, rng)
-        last_cal_d = 0.0
+        last_cal_q = np.zeros(n_q, dtype=np.float64)
+        last_cal_e = np.zeros(n_e, dtype=np.float64)
 
         traj: dict[str, dict[str, list[np.ndarray]]] = {
             "truth": {o: [] for o in (*TRUTH_QUBIT_OBS, EDGE_OBS)},
             "probe": {o: [] for o in (*VISIBLE_QUBIT_OBS, EDGE_OBS)},
             "claimed": {o: [] for o in (*VISIBLE_QUBIT_OBS, EDGE_OBS)},
         }
-        cal_d_arr = np.empty(n_snap, dtype=np.float64)
+        cal_q_arr = np.empty((n_snap, n_q), dtype=np.float64)
+        cal_e_arr = np.empty((n_snap, n_e), dtype=np.float64)
 
         t_cur = 0.0
         ri = 0
         for k in range(n_snap):
             t_target = snap_t[k]
-            while ri < len(recal_d) and recal_d[ri] <= t_target:
-                tr = recal_d[ri]
+            while ri < len(events) and events[ri][0] <= t_target:
+                tr, g = events[ri]
                 advance(tr - t_cur, tr)
                 t_cur = tr
-                repin(tr)
-                claimed = self._observe(truth_now(tr), cfg.claimed_noise, rng)
-                last_cal_d = tr
+                if n_groups == 1:  # device-wide recalibration
+                    repin(tr)
+                    claimed = self._observe(truth_now(tr), cfg.claimed_noise, rng)
+                    last_cal_q[:] = tr
+                    last_cal_e[:] = tr
+                else:  # one calibration group
+                    gq, ge = q_group == g, e_group == g
+                    repin(tr, gq, ge)
+                    fresh = self._observe(truth_now(tr), cfg.claimed_noise, rng)
+                    claimed = {o: np.where(ge if o == EDGE_OBS else gq, fresh[o], v)
+                               for o, v in claimed.items()}
+                    last_cal_q[gq] = tr
+                    last_cal_e[ge] = tr
                 ri += 1
             advance(t_target - t_cur, t_target)
             t_cur = t_target
@@ -306,7 +352,8 @@ class FleetSim:
                 traj["probe"][o].append(probe[o])
             for o in traj["claimed"]:
                 traj["claimed"][o].append(claimed[o])
-            cal_d_arr[k] = last_cal_d
+            cal_q_arr[k] = last_cal_q
+            cal_e_arr[k] = last_cal_e
 
         # ----------------------------------------------------------- row assembly
         q_ids = np.array([f"q{i}" for i in range(n_q)], dtype=object)
@@ -318,7 +365,7 @@ class FleetSim:
         cols: dict[str, list] = {k: [] for k in (
             "entity_type", "entity_id", "observable", "channel", "value", "sigma", "ts_h", "cal_h")}
 
-        def emit(channel: str, obs: str, ent_type: str, ids: np.ndarray,
+        def emit(channel: str, obs: str, ent_type: str, ids: np.ndarray, cal: np.ndarray,
                  keep: np.ndarray, sig_rel: float | None) -> None:
             vals = np.stack(traj[channel][obs], axis=0)[keep]  # (n_keep, n_ent)
             n_keep, n_ent = vals.shape
@@ -329,7 +376,7 @@ class FleetSim:
             cols["sigma"].append(
                 np.full(flat.shape, np.nan) if sig_rel is None else sig_rel * np.abs(flat))
             cols["ts_h"].append(np.repeat(snap_t[keep] * 24.0, n_ent))
-            cols["cal_h"].append(np.repeat(cal_d_arr[keep] * 24.0, n_ent))
+            cols["cal_h"].append((cal[keep] * 24.0).ravel())
             cols["entity_id"].append(np.tile(ids, n_keep))
             n_rows = n_keep * n_ent
             cols["entity_type"].append(np.full(n_rows, ent_type, dtype=object))
@@ -337,12 +384,12 @@ class FleetSim:
             cols["channel"].append(np.full(n_rows, channel, dtype=object))
 
         for obs in TRUTH_QUBIT_OBS:
-            emit("truth", obs, "qubit", q_ids, keep_all, None)
-        emit("truth", EDGE_OBS, "coupler", c_ids, keep_all, None)
+            emit("truth", obs, "qubit", q_ids, cal_q_arr, keep_all, None)
+        emit("truth", EDGE_OBS, "coupler", c_ids, cal_e_arr, keep_all, None)
         for channel, rel in (("claimed", cfg.claimed_noise), ("probe", cfg.probe_noise)):
             for obs in VISIBLE_QUBIT_OBS:
-                emit(channel, obs, "qubit", q_ids, keep_vis, rel)
-            emit(channel, EDGE_OBS, "coupler", c_ids, keep_vis, rel)
+                emit(channel, obs, "qubit", q_ids, cal_q_arr, keep_vis, rel)
+            emit(channel, EDGE_OBS, "coupler", c_ids, cal_e_arr, keep_vis, rel)
 
         start_ts = pd.Timestamp(cfg.start)
         if start_ts.tz is None:
