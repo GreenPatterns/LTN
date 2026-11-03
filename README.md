@@ -13,19 +13,30 @@ completely positive, trace-preserving (CPTP) evidence channels, and it is propag
 over the device graph by convex CPTP message passing (KrausProp). It is read out by
 POVMs and a Gaussian forecast head.
 
-This repository contains what is needed to check the numbers in the paper against the
-logged runs, and to re-run the study from public data.
+This repository contains the revised manuscript, what is needed to check its numbers against
+the logged runs, and what is needed to re-run the study from public data.
+
+## Start here
+
+| To… | Go to |
+|---|---|
+| read the paper | [`revision-paper/itn_revise.pdf`](revision-paper/itn_revise.pdf), with its LaTeX source in the same folder |
+| check the frozen splits against their seals | [Pre-registration and frozen splits](#pre-registration-and-frozen-splits) |
+| regenerate the tables and figures without training | [Checking the paper's numbers](#checking-the-papers-numbers-no-training) |
+| find the generator and records behind a table or figure | [Where each result comes from](#where-each-result-comes-from) |
+| re-run the experiments | [Setup](#setup) and [Data](#data), then [Re-running the experiments](#re-running-the-experiments) |
 
 ## Contents
 
 | Path | What it holds |
 |---|---|
+| `revision-paper/` | The revised manuscript: its PDF, its LaTeX source, and the exact figure and table files it includes. It builds on its own; see its [README](revision-paper/README.md). |
 | `ltn/` | The Python package. Data loaders and the unified telemetry schema (`ltn/data`). Models: LTN, LTN-v2 and the ablation variants (`ltn/models`). Baselines, including the classical reliability models (`ltn/baselines`). Experiments E1–E8 (`ltn/exp`). Metrics and statistics (`ltn/eval`). The synthetic fleet (`ltn/sim`). Table and figure generators (`ltn/paper_gen`). The IBM harvester, which was only ever dry-run (`ltn/harvest`). |
 | `scripts/` | Data download, campaign drivers, and the stand-alone analyses: state sufficiency, generator spectra, reliability endpoints, computational cost and change-point detectors. |
 | `tests/` | Unit tests for the validity of every quantum operation, and for the statistics, loaders and models. |
 | `splits/` | Frozen benchmark splits and their SHA-256 seals (`SHA256SUMS`). |
 | `runs/` | Per-run records: `results.jsonl`, `config.yaml` and `status.yaml`. Also the model checkpoints (`model.pt`), the Optuna tuning studies (`runs/tuning`), and the outputs of the stand-alone analyses. |
-| `paper/tables`, `paper/figures` | Tables and figures as generated from `runs/`. They serve as reference outputs. |
+| `paper/tables`, `paper/figures` | Tables and figures as generated from `runs/`. They serve as reference outputs for comparing your own runs; the manuscript itself is in `revision-paper/`. |
 | `docs/prereg.md` | The pre-registration: the frozen text, followed by a post-freeze addendum. |
 | `docs/PLAN_DELTA.md` | The deviation register. |
 | `notebooks/` | Data-quality notebook for the DAQEC archive. |
@@ -81,6 +92,8 @@ make PY=$(which python) sim-data             # Sim-Fleet -> data/uts, data/sim_t
   `runs/tuning/optuna_e1a_ewma.db`, was created after the second tag.
 - `docs/PLAN_DELTA.md` lists every deviation, separating those decided before the
   results were known from those decided after.
+- Commit `4a87c7f` is the state of the code, splits and records that the revised manuscript
+  was built from. The manuscript's Data Availability statement cites that commit.
 
 ## Checking the paper's numbers (no training)
 
@@ -95,8 +108,9 @@ The generators write into `paper/tables` and `paper/figures`. If this directory 
 kept under git, `git diff paper/` after running them shows any difference from the
 reference outputs.
 
-`make repro-fast` additionally compiles the manuscript, which is not part of this
-repository. Use the targets above instead.
+`make repro-fast` also runs the `paper` target, which compiles `paper/ltn.tex` with
+tectonic; that file is not part of this repository. To build the manuscript, use
+`revision-paper/` (see its README).
 
 The per-pair forecast files (`runs/**/predictions.parquet`, 1.4 GB in total) are not
 included in this repository because of their size. They are needed only to recompute
