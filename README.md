@@ -13,14 +13,13 @@ completely positive, trace-preserving (CPTP) evidence channels, and it is propag
 over the device graph by convex CPTP message passing (KrausProp). It is read out by
 POVMs and a Gaussian forecast head.
 
-This repository contains the revised manuscript, what is needed to check its numbers against
-the logged runs, and what is needed to re-run the study from public data.
+This repository contains what is needed to check the numbers in the paper against the
+logged runs, and to re-run the study from public data.
 
 ## Start here
 
 | To… | Go to |
 |---|---|
-| read the paper | [`revision-paper/itn_revise.pdf`](revision-paper/itn_revise.pdf), with its LaTeX source in the same folder |
 | check the frozen splits against their seals | [Pre-registration and frozen splits](#pre-registration-and-frozen-splits) |
 | regenerate the tables and figures without training | [Checking the paper's numbers](#checking-the-papers-numbers-no-training) |
 | find the generator and records behind a table or figure | [Where each result comes from](#where-each-result-comes-from) |
@@ -30,13 +29,12 @@ the logged runs, and what is needed to re-run the study from public data.
 
 | Path | What it holds |
 |---|---|
-| `revision-paper/` | The revised manuscript: its PDF, its LaTeX source, and the exact figure and table files it includes. It builds on its own; see its [README](revision-paper/README.md). |
 | `ltn/` | The Python package. Data loaders and the unified telemetry schema (`ltn/data`). Models: LTN, LTN-v2 and the ablation variants (`ltn/models`). Baselines, including the classical reliability models (`ltn/baselines`). Experiments E1–E8 (`ltn/exp`). Metrics and statistics (`ltn/eval`). The synthetic fleet (`ltn/sim`). Table and figure generators (`ltn/paper_gen`). The IBM harvester, which was only ever dry-run (`ltn/harvest`). |
 | `scripts/` | Data download, campaign drivers, and the stand-alone analyses: state sufficiency, generator spectra, reliability endpoints, computational cost and change-point detectors. |
 | `tests/` | Unit tests for the validity of every quantum operation, and for the statistics, loaders and models. |
 | `splits/` | Frozen benchmark splits and their SHA-256 seals (`SHA256SUMS`). |
 | `runs/` | Per-run records: `results.jsonl`, `config.yaml` and `status.yaml`. Also the model checkpoints (`model.pt`), the Optuna tuning studies (`runs/tuning`), and the outputs of the stand-alone analyses. |
-| `paper/tables`, `paper/figures` | Tables and figures as generated from `runs/`. They serve as reference outputs for comparing your own runs; the manuscript itself is in `revision-paper/`. |
+| `paper/tables`, `paper/figures` | Tables and figures as generated from `runs/`. They serve as reference outputs for comparing your own runs. |
 | `docs/prereg.md` | The pre-registration: the frozen text, followed by a post-freeze addendum. |
 | `docs/PLAN_DELTA.md` | The deviation register. |
 | `notebooks/` | Data-quality notebook for the DAQEC archive. |
@@ -109,8 +107,7 @@ kept under git, `git diff paper/` after running them shows any difference from t
 reference outputs.
 
 `make repro-fast` also runs the `paper` target, which compiles `paper/ltn.tex` with
-tectonic; that file is not part of this repository. To build the manuscript, use
-`revision-paper/` (see its README).
+tectonic; that file is not part of this repository, so use the targets above instead.
 
 The per-pair forecast files (`runs/**/predictions.parquet`, 1.4 GB in total) are not
 included in this repository because of their size. They are needed only to recompute
