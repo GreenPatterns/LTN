@@ -330,7 +330,8 @@ def f2_architecture() -> None:
         ax.set_ylim(0, 1)
 
     def box(ax, xc, yc, w, h, txt, color, fs=6.3, fc="white", lw=1.2):
-        ax.add_patch(FancyBboxPatch((xc - w / 2, yc - h / 2), w, h,
+        # unclipped: the padding of the leftmost boxes reaches just past x = 0
+        ax.add_patch(FancyBboxPatch((xc - w / 2, yc - h / 2), w, h, clip_on=False,
                                     boxstyle="round,pad=0.010", fc=fc, ec=color, lw=lw))
         ax.text(xc, yc, txt, ha="center", va="center", fontsize=fs)
 
@@ -345,14 +346,14 @@ def f2_architecture() -> None:
              .replace("{,}", ","), 0.64), ("Silicon spin\n3 SiMOS devices", 0.42),
             ("Sim-Fleet\nsynthetic, labeled", 0.20)]
     for txt, yc in srcs:
-        box(a, 0.075, yc, 0.13, 0.17, txt, INK2, fs=5.6)
+        box(a, 0.075, yc, 0.15, 0.17, txt, INK2, fs=5.6)
     a.text(0.075, 0.03, "token-ready live harvester (unused)", fontsize=5.2,
            color=INK2, style="italic", ha="center")
     box(a, 0.29, 0.53, 0.14, 0.40,
         "UTS event lake\n(source, device,\nentity, observable,\nchannel, value,\n$\\sigma$, $t$, $t_{\\mathrm{cal}}$)",
         ORANGE, fs=5.6)
     for _, yc in srcs:
-        arrow(a, 0.142, yc, 0.218, min(max(yc, 0.38), 0.68))
+        arrow(a, 0.152, yc, 0.218, min(max(yc, 0.38), 0.68))
     box(a, 0.475, 0.68, 0.14, 0.20, "graph builder\ncoupling maps,\nz-scored features", AQUA, fs=5.6)
     box(a, 0.475, 0.34, 0.14, 0.20, "frozen splits\nSHA-256 sealed,\npre-registered", AQUA, fs=5.6)
     arrow(a, 0.362, 0.60, 0.403, 0.66)
